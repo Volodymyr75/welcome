@@ -740,7 +740,7 @@ ul, li {
   width: 100px;
   height: 60px;
   display: block;
-  background: url("../img/Pink-logo-1.png") no-repeat scroll 50% 50%; }
+  background: url("../img/pink-logo-1.png") no-repeat scroll 50% 50%; }
   .page-header__logo-link:active {
     opacity: .3; }
 
@@ -1559,11 +1559,11 @@ ul, li {
     .page-header__logo-link {
       width: 165px;
       height: 80px;
-      background: url("../img/Pink-logo-2@1x.png") no-repeat scroll 19px 50%; }
+      background: url("../img/pink-logo-2@1x.png") no-repeat scroll 19px 50%; }
     .page-header__logo-link:hover {
-      background: url("../img/Pink-logo-2@1x--hvr.png") no-repeat scroll 19px 50%; }
+      background: url("../img/pink-logo-2@1x--hvr.png") no-repeat scroll 19px 50%; }
       .page-header__logo-link:active {
-        background: url("../img/Pink-logo-2@1x.png") no-repeat scroll 0 0; }
+        background: url("../img/pink-logo-2@1x.png") no-repeat scroll 0 0; }
     .page-footer__logo-link {
       width: 165px;
       height: 80px;
@@ -1864,7 +1864,7 @@ ul, li {
       display: inline; }
     .page-header__logo-link {
       height: 100px;
-      background: url("../img/Pink-logo-3@1x.png") no-repeat scroll 19px 50%; }
+      background: url("../img/pink-logo-3@1x.png") no-repeat scroll 19px 50%; }
     .page-footer__logo-link {
       height: 100px;
       background: url("../img/pink-logo-footer-3@1x.png") no-repeat scroll 19px 50%; }
