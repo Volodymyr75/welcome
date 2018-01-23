@@ -399,7 +399,139 @@ img {
 .hidden {
   display: none; }
 
+h1 {
+  text-align: center;
+}
 
+.items {
+  display: flex;
+  justify-content: space-between;
+
+}
+.item {
+  width: 200px; /*временно*/
+  height: 200px;/*временно*/
+  background-color: white;
+  text-align: center;
+  /*box-sizing: border-box;
+*/  /*padding: 2px;*/
+  cursor: pointer;
+  border: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.item:hover .top {
+  right: 100%;
+}
+.item:hover .top1 {
+  width: 100%;
+}
+.item:hover .right {
+  bottom: 100%;
+}
+.item:hover .right1 {
+  height: 100%;
+}
+.item:hover .bottom {
+  left: 100%;
+}
+.item:hover .bottom1 {
+  width: 100%;
+}
+.item:hover .left {
+  top: 100%;
+}
+.item:hover .left1 {
+  height: 100%;
+}
+
+.top {
+  width: 100%;
+  right: 0;
+  top: 0;
+  height: 2px;
+  position: absolute;
+  background: green;
+  transition: 0.7s;
+ 
+}
+.top1 {
+  width: 0;
+  top: 0;
+  right: 0;
+  height: 2px;
+  position: absolute;
+  background: green;
+  transition: 0.7s;
+  transition-delay: 0.7s;
+ 
+}
+
+.right {
+  height: 100%;
+  bottom: 0;
+  right: 0;
+  width: 2px;
+  position: absolute;
+  background: green;
+  transition: 0.7s;
+}
+.right1 {
+  height: 0;
+  bottom: 0;
+  right: 0;
+  width: 2px;
+  position: absolute;
+  background: green;
+  transition: 0.7s;
+  transition-delay: 0.7s;
+}
+
+.bottom {
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  position: absolute;
+  background: green;
+  transition: 0.7s;
+  
+  
+}
+.bottom1 {
+  width: 0;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  position: absolute;
+  background: green;
+  transition: 0.7s;
+  transition-delay: 0.7s;
+  
+}
+
+.left {
+  height: 100%;
+  top: 0;
+  left: 0;
+  width: 2px;
+  position: absolute;
+  background: green;
+  transition: 0.7s;
+  
+}
+
+.left1 {
+  height: 0;
+  top: 0;
+  left: 0;
+  width: 2px;
+  position: absolute;
+  background: green;
+  transition: 0.7s;
+  transition-delay: 0.7s;
+}
 
 
   @media (min-width: 768px) {
