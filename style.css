@@ -367,7 +367,7 @@ body {
   line-height: 24px;
   color: #000000;
   font-style: normal;
-  background-color: #ffffff; }
+  background-color: #15161E; }
 
 img {
   max-width: 100%;
@@ -399,28 +399,49 @@ img {
 .hidden {
   display: none; }
 
-h1 {
+.heading {
   text-align: center;
+  color: white;
+  margin-bottom: 50px;
 }
 
 .items {
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+
 
 }
 .item {
-  width: 200px; /*временно*/
-  height: 200px;/*временно*/
+  width: 30%;
+  min-width: 250px; /*временно*/
+  height: 400px;/*временно*/
   background-color: white;
   text-align: center;
-  /*box-sizing: border-box;
-*/  /*padding: 2px;*/
+  /*box-sizing: border-box;*/  
+  padding: 2px;
+  margin: 10px;
   cursor: pointer;
   border: none;
   position: relative;
   overflow: hidden;
+  /*box-shadow: 0 0 0 1px white;*/
 }
 
+.item a {
+  text-decoration: none;
+  font-weight: 500;
+  color: #15161E;
+
+}
+.item:hover {
+  color: white;
+  background-color: #15161E;
+}
+.item:hover a {
+  color: white;
+}
 .item:hover .top {
   right: 100%;
 }
@@ -450,9 +471,9 @@ h1 {
   width: 100%;
   right: 0;
   top: 0;
-  height: 2px;
+  height: 1px;
   position: absolute;
-  background: green;
+  background: white;
   transition: 0.7s;
  
 }
@@ -460,9 +481,9 @@ h1 {
   width: 0;
   top: 0;
   right: 0;
-  height: 2px;
+  height: 1px;
   position: absolute;
-  background: green;
+  background: white;
   transition: 0.7s;
   transition-delay: 0.7s;
  
@@ -472,18 +493,18 @@ h1 {
   height: 100%;
   bottom: 0;
   right: 0;
-  width: 2px;
+  width: 1px;
   position: absolute;
-  background: green;
+  background: white;
   transition: 0.7s;
 }
 .right1 {
   height: 0;
   bottom: 0;
   right: 0;
-  width: 2px;
+  width: 1px;
   position: absolute;
-  background: green;
+  background: white;
   transition: 0.7s;
   transition-delay: 0.7s;
 }
@@ -492,9 +513,9 @@ h1 {
   width: 100%;
   left: 0;
   bottom: 0;
-  height: 2px;
+  height: 1px;
   position: absolute;
-  background: green;
+  background: white;
   transition: 0.7s;
   
   
@@ -503,9 +524,9 @@ h1 {
   width: 0;
   bottom: 0;
   left: 0;
-  height: 2px;
+  height: 1px;
   position: absolute;
-  background: green;
+  background: white;
   transition: 0.7s;
   transition-delay: 0.7s;
   
@@ -515,9 +536,9 @@ h1 {
   height: 100%;
   top: 0;
   left: 0;
-  width: 2px;
+  width: 1px;
   position: absolute;
-  background: green;
+  background: white;
   transition: 0.7s;
   
 }
@@ -526,13 +547,15 @@ h1 {
   height: 0;
   top: 0;
   left: 0;
-  width: 2px;
+  width: 1px;
   position: absolute;
-  background: green;
+  background: white;
   transition: 0.7s;
   transition-delay: 0.7s;
 }
-
+ .work-description {
+  margin: 10px;
+ }
 
   @media (min-width: 768px) {
     .wrapper {

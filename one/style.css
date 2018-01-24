@@ -649,7 +649,26 @@ div[class^="effect-"] {
   /*padding-bottom: 24px;*/
 }
 
-
+.effect-7 a {
+  padding: 10px;
+  color:#e10916;
+}
+.effect-7 a:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: '.';
+  color: transparent;
+  background: #191a1d;
+  height: 2px;
+  transition: 0.5s;
+}
+.effect-7 a:hover:after {
+  width: 100%;
+}
 
 
   @media (min-width: 768px) {
