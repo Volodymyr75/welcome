@@ -400,9 +400,10 @@ img {
   display: none; }
 
 .heading {
+  font-family: 'Supermercado One', cursive;
   text-align: center;
   color: white;
-  margin-bottom: 50px;
+  margin: 50px 0;
 }
 
 .items {
@@ -414,9 +415,8 @@ img {
 
 }
 .item {
-  width: 30%;
-  min-width: 250px; /*временно*/
-  height: 400px;/*временно*/
+  width: 100%;
+  height: 300px;/*временно*/
   background-color: white;
   text-align: center;
   /*box-sizing: border-box;*/  
@@ -438,6 +438,7 @@ img {
 .item:hover {
   color: white;
   background-color: #15161E;
+  transition: all 0.2s;
 }
 .item:hover a {
   color: white;
@@ -557,9 +558,20 @@ img {
   margin: 10px;
  }
 
-  @media (min-width: 768px) {
-    .wrapper {
-      width: 86%;
-      max-width: 1170px;
-      margin: 0 auto; }
+@media (min-width: 768px) {
+  .wrapper {
+    width: 86%;
+    max-width: 1170px;
+    margin: 0 auto; }
+
+  .item {
+    width: 45%;
+    height: 450px;
   }
+}
+@media (min-width: 992px) {
+  .item {
+    width: 30%;
+    height: 500px;
+  }
+}
