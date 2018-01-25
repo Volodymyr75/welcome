@@ -154,6 +154,6 @@ class Swipe {
 
 // Use class to get element by string.
 var swiper = new Swipe('.s-reviews__item');
-swiper.onLeft(function() { alert('You swiped left.') });
+swiper.onLeft(function() { alert(swiper) });
 swiper.run();
 
