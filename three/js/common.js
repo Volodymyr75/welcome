@@ -143,8 +143,8 @@ console.log(slides);
 
 swiper.onLeft(function() {
  if(swiper.element.nextElementSibling) {
-    swiper.element.classList.remove('s-reviews__item--active');
-    swiper.element.nextElementSibling.classList.add('s-reviews__item--active');
+    swiper.element.className = 's-reviews__item--active';
+    swiper.element.nextElementSibling.className = 's-reviews__item--active';
  }else {
   alert("there's no right");
  }
