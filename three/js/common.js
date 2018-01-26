@@ -145,7 +145,7 @@ swiper.onLeft(function() {
   slides[currentSlide].className = 's-reviews__item';
   currentSlide = (currentSlide+1)%slides.length;
   slides[currentSlide].className = 's-reviews__item s-reviews__item--active';
-  alert('some text');
+  
  });
 swiper.run();
 
