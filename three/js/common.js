@@ -135,11 +135,16 @@ class Swipe {
 }
 
 // Use class to get element by string.
-var swiper = new Swipe('.s-reviews__item');
+var swiper = new Swipe('.s-reviews__list');
 // console.log(slides);
-// console.log(swiper.element.className);
+console.log(swiper.element);
+// var swiper = new Swipe(document.querySelectorAll('.s-reviews__item'));
+// console.log(swiper);
 
 swiper.onLeft(function() {
+  slides[currentSlide].className = 's-reviews__item';
+  currentSlide = (currentSlide+1)%slides.length;
+  slides[currentSlide].className = 's-reviews__item s-reviews__item--active';
  });
 swiper.run();
 
@@ -147,7 +152,7 @@ swiper.onRight(function() {
   });
 swiper.run();
 
-function initialize() {
+function initMap() {
       var mapCanvas = document.getElementById('map');   
       var myLatLng = new google.maps.LatLng(48.4635524, 35.0232428);
       var mapOptions = {
@@ -164,5 +169,6 @@ function initialize() {
       map: map,
       icon: image
   });
+      // google.maps.event.addDomListener(window, 'load', initMap);
     }
-    // google.maps.event.addDomListener(window, 'load', initialize);
+    // google.maps.event.addDomListener(window, 'load', initMap);
