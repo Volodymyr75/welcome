@@ -142,9 +142,7 @@ console.log(swiper);
 // console.log(swiper);
 
 swiper.onLeft(function() {
-  slides[currentSlide].className = 's-reviews__item';
-  currentSlide = (currentSlide+1)%slides.length;
-  slides[currentSlide].className = 's-reviews__item s-reviews__item--active';
+ 
   alert("some test");
  });
 swiper.run();
