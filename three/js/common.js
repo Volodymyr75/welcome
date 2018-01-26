@@ -152,6 +152,12 @@ swiper.onLeft(function() {
 swiper.run();
 
 swiper.onRight(function() {
+  if(swiper.element.previousElementSibling) {
+    swiper.element.classList.remove('s-reviews__item--active')
+    swiper.element.previousElementSibling.classList.add('s-reviews__item--active');
+ }else {
+  alert("some test");
+ }
   });
 swiper.run();
 
