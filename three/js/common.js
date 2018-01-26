@@ -129,14 +129,14 @@ class Swipe {
 
     run() {
         this.element.addEventListener('touchmove', function(evt) {
-            this.handleTouchMove(evt).bind(this);
+            this.handleTouchMove(evt);
         }.bind(this), false);
     }
 }
 
 // Use class to get element by string.
 var swiper = new Swipe('.s-reviews__item');
-// console.log(slides);
+console.log(slides);
 // console.log(swiper.element.classList.remove('s-reviews__item--active'));
 // var swiper = new Swipe(document.querySelectorAll('.s-reviews__item'));
 // console.log(swiper);
