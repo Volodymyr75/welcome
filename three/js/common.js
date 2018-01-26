@@ -136,8 +136,8 @@ class Swipe {
 
 // Use class to get element by string.
 var swiper = new Swipe('.s-reviews__item');
-
-
+console.log(slides);
+console.log(swiper.element.className);
 
 swiper.onLeft(function() {
   var slides = document.querySelectorAll('.s-reviews__item');
@@ -166,4 +166,4 @@ function initialize() {
       icon: image
   });
     }
-    google.maps.event.addDomListener(window, 'load', initialize);
+    // google.maps.event.addDomListener(window, 'load', initialize);
