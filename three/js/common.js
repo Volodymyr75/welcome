@@ -135,14 +135,19 @@ class Swipe {
 }
 
 // Use class to get element by string.
-var swiper = new Swipe('.s-reviews__list');
+var swiper = new Swipe('.s-reviews__item');
 // console.log(slides);
-console.log(swiper);
+// console.log(swiper.element.classList.remove('s-reviews__item--active'));
 // var swiper = new Swipe(document.querySelectorAll('.s-reviews__item'));
 // console.log(swiper);
 
 swiper.onLeft(function() {
- 
+ if(swiper.element.nextElementSibling) {
+    swiper.element.classList.remove('s-reviews__item--active')
+    swiper.element.nextElementSibling.classList.add('s-reviews__item--active');
+ }else {
+  alert("some test");
+ }
   alert("some test");
  });
 swiper.run();
