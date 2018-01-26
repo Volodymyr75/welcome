@@ -135,9 +135,9 @@ class Swipe {
 }
 
 // Use class to get element by string.
-var swiper = new Swipe('.s-reviews__list');
+var swiper = new Swipe('.s-reviews__item');
 // console.log(slides);
-console.log(swiper.element);
+console.log(swiper);
 // var swiper = new Swipe(document.querySelectorAll('.s-reviews__item'));
 // console.log(swiper);
 
