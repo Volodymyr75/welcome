@@ -143,20 +143,20 @@ console.log(slides);
 
 swiper.onLeft(function() {
  if(swiper.element.nextElementSibling) {
-    swiper.element.classList.remove('s-reviews__item--active')
+    swiper.element.classList.remove('s-reviews__item--active');
     swiper.element.nextElementSibling.classList.add('s-reviews__item--active');
  }else {
-  alert("some test");
+  alert("there's no right");
  }
  });
 swiper.run();
 
 swiper.onRight(function() {
   if(swiper.element.previousElementSibling) {
-    swiper.element.classList.remove('s-reviews__item--active')
+    swiper.element.classList.remove('s-reviews__item--active');
     swiper.element.previousElementSibling.classList.add('s-reviews__item--active');
  }else {
-  alert("some test");
+  alert("there's no left");
  }
   });
 swiper.run();
