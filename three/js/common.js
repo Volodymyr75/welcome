@@ -39,6 +39,7 @@ navNext.addEventListener("click", function() {
   currentSlide = (currentSlide+1)%slides.length;
   slides[currentSlide].className = 's-reviews__item s-reviews__item--active';
 
+
 });
 navPrev.addEventListener("click", function() {
   if(currentSlide == 0) {
@@ -54,28 +55,9 @@ navPrev.addEventListener("click", function() {
 
 });
 
+ 
 
 
-
-function initialize() {
-      var mapCanvas = document.getElementById('map');   
-      var myLatLng = new google.maps.LatLng(48.4635524, 35.0232428);
-      var mapOptions = {
-        center: myLatLng,
-        zoom: 16,
-        mapTypeId: google.maps.MapTypeId.ROADMAP,
-    // disableDefaultUI: true
-      }
-      var map = new google.maps.Map(mapCanvas, mapOptions); 
-    
-    var image = 'img/icon-map-marker.svg';
-      var beachMarker = new google.maps.Marker({
-      position: myLatLng,
-      map: map,
-      icon: image
-  });
-    }
-    google.maps.event.addDomListener(window, 'load', initialize);
 
 
 class Swipe {
@@ -154,6 +136,31 @@ class Swipe {
 
 // Use class to get element by string.
 var swiper = new Swipe('.s-reviews__item');
-swiper.onLeft(function() { alert(console.log(swiper)) });
+
+
+
+swiper.onLeft(function() { slides[currentSlide].className = 's-reviews__item';
+  currentSlide = (currentSlide+1)%slides.length;
+  slides[currentSlide].className = 's-reviews__item s-reviews__item--active'; });
 swiper.run();
 
+
+function initialize() {
+      var mapCanvas = document.getElementById('map');   
+      var myLatLng = new google.maps.LatLng(48.4635524, 35.0232428);
+      var mapOptions = {
+        center: myLatLng,
+        zoom: 16,
+        mapTypeId: google.maps.MapTypeId.ROADMAP,
+    // disableDefaultUI: true
+      }
+      var map = new google.maps.Map(mapCanvas, mapOptions); 
+    
+    var image = 'img/icon-map-marker.svg';
+      var beachMarker = new google.maps.Marker({
+      position: myLatLng,
+      map: map,
+      icon: image
+  });
+    }
+    google.maps.event.addDomListener(window, 'load', initialize);
