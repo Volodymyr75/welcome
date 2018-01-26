@@ -140,8 +140,6 @@ console.log(slides);
 console.log(swiper.element.className);
 
 swiper.onLeft(function() {
-  var slides = document.querySelectorAll('.s-reviews__item');
-var currentSlide = 0;
  slides[currentSlide].className = 's-reviews__item';
   currentSlide = (currentSlide+1)%slides.length;
   slides[currentSlide].className = 's-reviews__item s-reviews__item--active'; });
