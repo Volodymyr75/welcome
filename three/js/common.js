@@ -148,7 +148,6 @@ swiper.onLeft(function() {
  }else {
   alert("some test");
  }
-  alert("some test");
  });
 swiper.run();
 
