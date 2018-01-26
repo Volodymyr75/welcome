@@ -135,7 +135,7 @@ class Swipe {
 }
 
 // Use class to get element by string.
-var swiper = new Swipe('.s-reviews__item');
+var swiper = new Swipe('.s-reviews__list');
 // console.log(slides);
 console.log(swiper);
 // var swiper = new Swipe(document.querySelectorAll('.s-reviews__item'));
@@ -145,7 +145,7 @@ swiper.onLeft(function() {
   slides[currentSlide].className = 's-reviews__item';
   currentSlide = (currentSlide+1)%slides.length;
   slides[currentSlide].className = 's-reviews__item s-reviews__item--active';
-  
+  alert("some test");
  });
 swiper.run();
 
