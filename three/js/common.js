@@ -143,7 +143,7 @@ console.log(slides);
 
 swiper.onLeft(function() {
  if(swiper.element.nextElementSibling) {
-    swiper.element.className = 's-reviews__item--active';
+    swiper.element.className = 's-reviews__item';
     swiper.element.nextElementSibling.className = 's-reviews__item--active';
  }else {
   alert("there's no right");
