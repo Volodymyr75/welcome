@@ -136,8 +136,8 @@ class Swipe {
 
 // Use class to get element by string.
 var swiper = new Swipe('.s-reviews__item');
-console.log(slides);
-console.log(swiper.element.className);
+// console.log(slides);
+// console.log(swiper.element.className);
 
 swiper.onLeft(function() {
  slides[currentSlide].className = 's-reviews__item';
@@ -145,6 +145,17 @@ swiper.onLeft(function() {
   slides[currentSlide].className = 's-reviews__item s-reviews__item--active'; });
 swiper.run();
 
+swiper.onRight(function() {
+  if(currentSlide == 0) {
+    slides[currentSlide].className = 's-reviews__item';
+    currentSlide = slides.length - 1;
+    slides[currentSlide].className = 's-reviews__item s-reviews__item--active';
+  }else {
+    slides[currentSlide].className = 's-reviews__item';
+    currentSlide = currentSlide - 1;
+    slides[currentSlide].className = 's-reviews__item s-reviews__item--active';
+  } });
+swiper.run();
 
 function initialize() {
       var mapCanvas = document.getElementById('map');   
