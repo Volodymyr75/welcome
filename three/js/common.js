@@ -129,14 +129,14 @@ class Swipe {
 
     run() {
         this.element.addEventListener('touchmove', function(evt) {
-            this.handleTouchMove(evt).bind(this);
+            this.handleTouchMove(evt);
         }.bind(this), false);
     }
 }
 
 // Use class to get element by string.
 var swiper = new Swipe('.s-reviews__item');
-console.log(slides);
+
 // console.log(swiper.element.classList.remove('s-reviews__item--active'));
 // var swiper = new Swipe(document.querySelectorAll('.s-reviews__item'));
 // console.log(swiper);
@@ -145,6 +145,7 @@ swiper.onLeft(function() {
  if(swiper.element.nextElementSibling) {
     swiper.element.className = 's-reviews__item';
     swiper.element.nextElementSibling.className = 's-reviews__item s-reviews__item--active';
+    swiper.element = swiper.element.nextElementSibling;
  }else {
   alert("there's no right");
  }
@@ -156,7 +157,7 @@ swiper.onRight(function() {
     swiper.element.classList.remove('s-reviews__item--active');
     swiper.element.previousElementSibling.classList.add('s-reviews__item--active');
  }else {
-  alert("there's no left");
+  alert("there's no more left");
  }
   });
 swiper.run();
