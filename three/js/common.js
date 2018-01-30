@@ -31,136 +31,97 @@ navToggle.addEventListener("click", function() {
 
 var navPrev = document.querySelector(".s-reviews__nav--previous");
 var navNext = document.querySelector(".s-reviews__nav--next");
-var slides = document.querySelectorAll('.s-reviews__item');
+var slides = document.querySelectorAll('.s-reviews__toggle');
+
 var currentSlide = 0;
-
-navNext.addEventListener("click", function() {
-  slides[currentSlide].className = 's-reviews__item';
+function left() {
+  slides[currentSlide].removeAttribute('checked'); 
   currentSlide = (currentSlide+1)%slides.length;
-  slides[currentSlide].className = 's-reviews__item s-reviews__item--active';
-
-
-});
-navPrev.addEventListener("click", function() {
-  if(currentSlide == 0) {
-    slides[currentSlide].className = 's-reviews__item';
-    currentSlide = slides.length - 1;
-    slides[currentSlide].className = 's-reviews__item s-reviews__item--active';
-  }else {
-    slides[currentSlide].className = 's-reviews__item';
-    currentSlide = currentSlide - 1;
-    slides[currentSlide].className = 's-reviews__item s-reviews__item--active';
-  }
-  
-
-});
-
- 
-
-
-
-
-class Swipe {
-    constructor(element) {
-        this.xDown = null;
-        this.yDown = null;
-        this.element = typeof(element) === 'string' ? document.querySelector(element) : element;
-
-        this.element.addEventListener('touchstart', function(evt) {
-            this.xDown = evt.touches[0].clientX;
-            this.yDown = evt.touches[0].clientY;
-        }.bind(this), false);
-
-    }
-
-    onLeft(callback) {
-        this.onLeft = callback;
-
-        return this;
-    }
-
-    onRight(callback) {
-        this.onRight = callback;
-
-        return this;
-    }
-
-    onUp(callback) {
-        this.onUp = callback;
-
-        return this;
-    }
-
-    onDown(callback) {
-        this.onDown = callback;
-
-        return this;
-    }
-
-    handleTouchMove(evt) {
-        if ( ! this.xDown || ! this.yDown ) {
-            return;
-        }
-
-        var xUp = evt.touches[0].clientX;
-        var yUp = evt.touches[0].clientY;
-
-        this.xDiff = this.xDown - xUp;
-        this.yDiff = this.yDown - yUp;
-
-        if ( Math.abs( this.xDiff ) > Math.abs( this.yDiff ) ) { // Most significant.
-            if ( this.xDiff > 0 ) {
-                this.onLeft();
-            } else {
-                this.onRight();
-            }
-        } else {
-            if ( this.yDiff > 0 ) {
-                this.onUp();
-            } else {
-                this.onDown();
-            }
-        }
-
-        // Reset values.
-        this.xDown = null;
-        this.yDown = null;
-    }
-
-    run() {
-        this.element.addEventListener('touchmove', function(evt) {
-            this.handleTouchMove(evt);
-        }.bind(this), false);
-    }
+  slides[currentSlide].setAttribute('checked', 'checked');
 }
+navNext.addEventListener("click", left);
 
-// Use class to get element by string.
-var swiper = new Swipe('.s-reviews__item');
+function right() {
+  if(currentSlide == 0) {
+    slides[currentSlide].removeAttribute('checked');
+    currentSlide = slides.length - 1;
+    slides[currentSlide].setAttribute('checked', 'checked');
+  }else {
+    slides[currentSlide].removeAttribute('checked');
+    currentSlide = currentSlide - 1;
+    slides[currentSlide].setAttribute('checked', 'checked');
+  }
+}
+navPrev.addEventListener("click", right);
 
-// console.log(swiper.element.classList.remove('s-reviews__item--active'));
-// var swiper = new Swipe(document.querySelectorAll('.s-reviews__item'));
-// console.log(swiper);
 
-swiper.onLeft(function() {
- if(swiper.element.nextElementSibling) {
-    swiper.element.className = 's-reviews__item';
-    swiper.element.nextElementSibling.className = 's-reviews__item s-reviews__item--active';
-    swiper.element = swiper.element.nextElementSibling;
- }else {
-  alert("there's no right");
- }
- });
-swiper.run();
 
-swiper.onRight(function() {
-  if(swiper.element.previousElementSibling) {
-    swiper.element.classList.remove('s-reviews__item--active');
-    swiper.element.previousElementSibling.classList.add('s-reviews__item--active');
- }else {
-  alert("there's no more left");
- }
-  });
-swiper.run();
+  var devBr = {};
+
+
+        devBr.prepareForTouches = function () {
+
+           
+            function initTouchListeners (touchableElement) {
+                var touchControl = new Hammer(touchableElement);
+                touchControl.on('swipeleft', left);
+                touchControl.on('swiperight', right);
+            };
+
+            var listItems = document.querySelectorAll('.s-reviews__slide');
+                for (var i = 0; i < listItems.length; i += 1) {
+                    initTouchListeners(listItems[i]);
+                }
+        }
+
+        devBr.prepareForTouchesWhenReady = function () {
+          document.addEventListener('DOMContentLoaded', devBr.prepareForTouches);
+        }
+        devBr.prepareForTouchesWhenReady();
+ // var devBr = {};
+
+// var hammer = new Hammer(document.querySelector('.s-reviews__item'));
+
+
+// hammer.get("swipe");
+// hammer.on("swipeleft", function(){
+//     hammer.element.classList.remove('s-reviews__item--active');
+//     hammer.element.nextElementSibling.classList.add('s-reviews__item--active')
+// });
+// hammer.on("swiperight", function(){
+//     alert('swipe right');
+// });
+
+// function swipeElement (event) {
+//   var elementToSwip = event.target;
+//   elementToSwip.parentNode.classList.remove('s-reviews__item--active');
+//   elementToSwip.parentNode.nextElementSibling.classList.add('s-reviews__item--active');
+// }
+
+// devBr.prepareForTouches = function () {
+//   function initTouchListeners (touchableElement) {
+//     var touchControl = new Hammer(touchableElement);
+//     touchControl.on('swipeleft', function () {
+//       console.log(touchControl.element.nextElementSibling);
+//       if(touchControl.element.nextElementSibling.className == 's-reviews__item') {
+//         touchControl.element.classList.remove('s-reviews__item--active');
+//         touchControl.element.nextElementSibling.classList.add('s-reviews__item--active');
+//       }
+      
+//     });
+//   };
+
+//   var listItems = document.querySelectorAll('.s-reviews__item');
+//   for (var i = 0; i < listItems.length; i += 1) {
+//     initTouchListeners(listItems[i]);
+//   }
+// }
+
+// devBr.prepareForTouchesWhenReady = function () {
+//   document.addEventListener('DOMContentLoaded', devBr.prepareForTouches);
+// }
+// devBr.prepareForTouchesWhenReady();
+
 
 function initMap() {
       var mapCanvas = document.getElementById('map');   
@@ -179,6 +140,6 @@ function initMap() {
       map: map,
       icon: image
   });
-      // google.maps.event.addDomListener(window, 'load', initMap);
+     
     }
     // google.maps.event.addDomListener(window, 'load', initMap);
