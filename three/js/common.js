@@ -32,6 +32,7 @@ navToggle.addEventListener("click", function() {
 var navPrev = document.querySelector(".s-reviews__nav--previous");
 var navNext = document.querySelector(".s-reviews__nav--next");
 var slides = document.querySelectorAll('.s-reviews__toggle');
+var tableToggle = document.querySelectorAll('.s-tarrifs__toggle');
 
 var currentSlide = 0;
 function left() {
@@ -54,8 +55,23 @@ function right() {
 }
 navPrev.addEventListener("click", right);
 
-
-
+var currentToggle = 1;
+function leftTable() {
+  tableToggle[currentToggle].removeAttribute('checked'); 
+  currentToggle = (currentToggle+1)%tableToggle.length;
+  tableToggle[currentToggle].setAttribute('checked', 'checked');
+}
+function rightTable() {
+  if(currentToggle == 0) {
+    tableToggle[currentToggle].removeAttribute('checked');
+    currentToggle = tableToggle.length - 1;
+    tableToggle[currentToggle].setAttribute('checked', 'checked');
+  }else {
+    tableToggle[currentToggle].removeAttribute('checked');
+    currentToggle = currentToggle - 1;
+    tableToggle[currentToggle].setAttribute('checked', 'checked');
+  }
+}
   var devBr = {};
 
 
@@ -67,11 +83,18 @@ navPrev.addEventListener("click", right);
                 touchControl.on('swipeleft', left);
                 touchControl.on('swiperight', right);
             };
+             function initTouchListenersTable (touchableElement) {
+                var touchControl1 = new Hammer(touchableElement);
+                touchControl1.on('swipeleft', leftTable);
+                touchControl1.on('swiperight', rightTable);
+            };
 
             var listItems = document.querySelectorAll('.s-reviews__slide');
                 for (var i = 0; i < listItems.length; i += 1) {
                     initTouchListeners(listItems[i]);
                 }
+            var table = document.querySelector('.s-tarrifs__table');
+            initTouchListenersTable(table);
         }
 
         devBr.prepareForTouchesWhenReady = function () {
