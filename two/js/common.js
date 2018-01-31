@@ -35,7 +35,7 @@ $(document).ready(function() {
 		};
 	});
 
-	$(".s-about__header, .s-parents__header, .s-children__header, .s-contacts__header").animated("fadeInUp", "fadeOutDown");
+	$(".s-about__title, .s-parents__title, .s-children__title, .s-contacts__title").animated("fadeInUp", "fadeOutDown");
 
 
 
