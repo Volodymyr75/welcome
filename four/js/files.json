@@ -2,25 +2,28 @@
 	"files": [
 		{
 			"type":"SCRIPT",
-			"source":"../libs/slick/slick.min.js",
+			"source":"../four/libs/slick/slick.min.js",
 			"size":4.096
 		},
 		{
 			"type":"SCRIPT",
-			"source":"../js/common.js",
+			"source":"../four/js/common.js",
 			"size":4.096
 		},
 		{
 			"type":"CSS",
-			"source":"../libs/slick/slick.css"
+			"source":"../four/libs/slick/slick.css",
+			"size": 16.819
 		},
 		{
 			"type":"CSS",
-			"source":"../libs/slick/slick-theme.css"
+			"source":"../four/libs/slick/slick-theme.css",
+			"size": 16.819
 		},
 		{
 			"type":"CSS",
-			"source":"../css/style.min.css"
+			"source":"../four/css/style.min.css",
+			"size": 16.819
 		}
 		
 	]
