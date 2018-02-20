@@ -424,6 +424,7 @@ ul, li {
       color: #ffffff; }
 
 .hamburger {
+  padding: 5px 5px;
   display: inline-block;
   cursor: pointer;
   transition-property: opacity, -webkit-filter;
@@ -503,8 +504,6 @@ ul, li {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  height: 100vh;
-  min-height: 600px;
   background: url(../img/header-bg.jpg) no-repeat center;
   background-size: cover;
   position: relative;
@@ -808,6 +807,8 @@ ul, li {
         padding-bottom: 1.5rem; }
     .page-header__nav {
       align-items: flex-start; }
+    .page-header__text {
+      margin-top: -15rem; }
     .main-nav__list {
       flex-direction: column;
       align-items: center; }
