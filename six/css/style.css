@@ -542,8 +542,8 @@ ul, li {
 
 .page-header__logo {
   display: flex;
-  width: 14vw;
-  height: 14vw;
+  width: 8rem;
+  height: 8rem;
   border-radius: 50%;
   overflow: hidden;
   background-color: rgba(255, 255, 255, 0.1);
@@ -583,8 +583,8 @@ ul, li {
     font-size: 1.8rem; }
 
 .page-header__arrow {
-  width: 8vw;
-  height: 8vw;
+  width: 8rem;
+  height: 8rem;
   z-index: 3; }
   .page-header__arrow svg {
     border-radius: 50%;
@@ -742,8 +742,8 @@ ul, li {
 
 .page-footer__logo {
   display: flex;
-  width: 14vw;
-  height: 14vw;
+  width: 8rem;
+  height: 8rem;
   border-radius: 50%;
   overflow: hidden;
   background-color: rgba(255, 255, 255, 0.1);
@@ -782,11 +782,11 @@ ul, li {
     .hamburger {
       display: none; }
     .page-header__logo {
-      width: 6vw;
-      height: 6vw; }
+      width: 7rem;
+      height: 7rem; }
     .page-header__arrow {
-      width: 4vw;
-      height: 4vw; }
+      width: 6rem;
+      height: 6rem; }
     .s-select__price-list {
       flex-wrap: nowrap; }
     .s-select__price-item {
@@ -796,22 +796,16 @@ ul, li {
     .page-footer__wrapper {
       justify-content: space-between; }
     .page-footer__logo {
-      width: 6vw;
-      height: 6vw; }
+      width: 7rem;
+      height: 7rem; }
     .page-footer__menu {
       display: block;
       width: 70%; } }
   @media (min-width: 992px) {
     html {
       font-size: 8px; }
-    .page-header__logo {
-      width: 5vw;
-      height: 5vw; }
       .s-select__price-item svg {
-        width: 8rem; }
-    .page-footer__logo {
-      width: 5vw;
-      height: 5vw; } }
+        width: 8rem; } }
   @media (min-width: 1200px) {
     html {
       font-size: 10px; }
