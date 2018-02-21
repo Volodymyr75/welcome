@@ -542,8 +542,8 @@ ul, li {
 
 .page-header__logo {
   display: flex;
-  width: 12vw;
-  height: 12vw;
+  width: 14vw;
+  height: 14vw;
   border-radius: 50%;
   overflow: hidden;
   background-color: rgba(255, 255, 255, 0.1);
@@ -742,8 +742,8 @@ ul, li {
 
 .page-footer__logo {
   display: flex;
-  width: 10vw;
-  height: 10vw;
+  width: 14vw;
+  height: 14vw;
   border-radius: 50%;
   overflow: hidden;
   background-color: rgba(255, 255, 255, 0.1);
