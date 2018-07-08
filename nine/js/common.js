@@ -29,5 +29,30 @@ $(document).ready(function() {
 		  $(".modal-overlay--show").removeClass("modal-overlay--show");
 	});
 
+	$(".b-viewbox__item--slider").on("click", function(event) {
+		  event.preventDefault();
+		  $(".b-viewbox__slider").show();
+		  $(".b-viewbox__panoram").hide();
+		  $(".b-viewbox__map").hide();
+
+	});
+
+	$(".b-viewbox__item--panoram").on("click", function(event) {
+		  event.preventDefault();
+		  $(".b-viewbox__slider").hide();
+		  $(".b-viewbox__panoram").show();
+		  $(".b-viewbox__map").hide();
+
+	});
+
+	$(".b-viewbox__item--map").on("click", function(event) {
+		  event.preventDefault();
+		  $(".b-viewbox__slider").hide();
+		  $(".b-viewbox__panoram").hide();
+		  $(".b-viewbox__map").show();
+
+	});
+
+
 
 });
