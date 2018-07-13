@@ -529,12 +529,10 @@ ul, li {
     justify-content: space-around;
     margin-top: 5rem; }
   .download--board {
-    justify-content: center;
-    background-color: rgba(0, 0, 0, 0.3); }
+    justify-content: center; }
 
 .download__tech {
   display: block;
-  min-width: 13.5rem;
   padding: 6rem 2rem 3rem;
   font-size: 1rem;
   font-weight: bold;
@@ -551,7 +549,6 @@ ul, li {
 
 .download__present {
   display: block;
-  min-width: 13.5rem;
   padding: 6rem 2rem 3rem;
   font-size: 1rem;
   font-weight: bold;
@@ -568,7 +565,6 @@ ul, li {
 
 .download__price {
   display: block;
-  min-width: 13.5rem;
   padding: 6rem 2rem 3rem;
   font-size: 1rem;
   font-weight: bold;
@@ -1154,8 +1150,7 @@ ul, li {
 .s-board__download {
   width: 90%;
   display: flex;
-  justify-content: center;
-  background-color: rgba(0, 0, 0, 0.3); }
+  justify-content: center; }
 
 .s-board__table {
   display: flex;
@@ -1309,12 +1304,15 @@ ul, li {
     .line-break {
       display: inline; }
     .download__tech {
+      min-width: 13.5rem;
       font-size: 1.3rem;
       background-size: 5rem; }
     .download__present {
+      min-width: 13.5rem;
       font-size: 1.3rem;
       background-size: 5rem; }
     .download__price {
+      min-width: 13.5rem;
       font-size: 1.3rem;
       background-size: 5rem; }
     .b-features__item {
