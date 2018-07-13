@@ -535,14 +535,14 @@ ul, li {
   display: block;
   min-width: 13.5rem;
   padding: 6rem 2rem 3rem;
-  font-size: 1.3rem;
+  font-size: 1rem;
   font-weight: bold;
   text-transform: uppercase;
   text-decoration: none;
   text-align: center;
   background-image: url(../img/recycle-sign.svg);
+  background-size: 4rem;
   background-repeat: no-repeat;
-  background-size: 5rem;
   background-position: top center; }
   .download__tech:hover {
     background-image: url(../img/recycle-sign-blue.svg);
@@ -552,14 +552,14 @@ ul, li {
   display: block;
   min-width: 13.5rem;
   padding: 6rem 2rem 3rem;
-  font-size: 1.3rem;
+  font-size: 1rem;
   font-weight: bold;
   text-transform: uppercase;
   text-decoration: none;
   text-align: center;
   background-image: url(../img/recycle-sign.svg);
   background-repeat: no-repeat;
-  background-size: 5rem;
+  background-size: 4rem;
   background-position: top center; }
   .download__present:hover {
     background-image: url(../img/recycle-sign-blue.svg);
@@ -569,14 +569,14 @@ ul, li {
   display: block;
   min-width: 13.5rem;
   padding: 6rem 2rem 3rem;
-  font-size: 1.3rem;
+  font-size: 1rem;
   font-weight: bold;
   text-transform: uppercase;
   text-decoration: none;
   text-align: center;
   background-image: url(../img/recycle-sign.svg);
   background-repeat: no-repeat;
-  background-size: 5rem;
+  background-size: 4rem;
   background-position: top center; }
   .download__price:hover {
     background-image: url(../img/recycle-sign-blue.svg);
@@ -1304,6 +1304,15 @@ ul, li {
       margin: 0 auto; }
     .line-break {
       display: inline; }
+    .download__tech {
+      font-size: 1.3rem;
+      background-size: 5rem; }
+    .download__present {
+      font-size: 1.3rem;
+      background-size: 5rem; }
+    .download__price {
+      font-size: 1.3rem;
+      background-size: 5rem; }
     .b-features__item {
       width: 20rem;
       height: 20rem;
