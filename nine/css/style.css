@@ -529,7 +529,8 @@ ul, li {
     justify-content: space-around;
     margin-top: 5rem; }
   .download--board {
-    justify-content: center; }
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.3); }
 
 .download__tech {
   display: block;
@@ -1153,7 +1154,8 @@ ul, li {
 .s-board__download {
   width: 90%;
   display: flex;
-  justify-content: center; }
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.3); }
 
 .s-board__table {
   display: flex;
@@ -1512,8 +1514,6 @@ ul, li {
       margin-left: -13rem; } }
 
 @media (max-width: 767px) {
-    .download {
-      width: 90%; }
   .s-slider__header {
     order: 1; }
     .s-slider__features {
