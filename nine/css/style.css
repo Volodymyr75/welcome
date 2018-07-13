@@ -1151,7 +1151,9 @@ ul, li {
     font-size: 2rem; }
 
 .s-board__download {
-  width: 90%; }
+  width: 90%;
+  display: flex;
+  justify-content: center; }
 
 .s-board__table {
   display: flex;
@@ -1510,6 +1512,8 @@ ul, li {
       margin-left: -13rem; } }
 
 @media (max-width: 767px) {
+    .download {
+      width: 90%; }
   .s-slider__header {
     order: 1; }
     .s-slider__features {
