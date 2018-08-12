@@ -519,6 +519,44 @@ ul, li {
   transform: rotate3d(0, 0, 1, 0deg);
   transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1); }
 
+.btn--back {
+  overflow: hidden;
+  width: 20rem;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  border: 0.3rem solid #00AFEC;
+  transition: border-color 0.3s, color 0.3s;
+  transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1); }
+
+.btn--back::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 150%;
+  height: 100%;
+  background: #ffffff;
+  z-index: -1;
+  -webkit-transform: rotate3d(0, 0, 1, -45deg) translate3d(0, -3em, 0);
+  transform: rotate3d(0, 0, 1, -45deg) translate3d(0, -3em, 0);
+  -webkit-transform-origin: 0% 100%;
+  transform-origin: 0% 100%;
+  transition: opacity 0.3s, background-color 0.3s, -webkit-transform 0.3s;
+  transition: transform 0.3s, opacity 0.3s, background-color 0.3s;
+  transition: transform 0.3s, opacity 0.3s, background-color 0.3s, -webkit-transform 0.3s; }
+
+.btn--back:hover {
+  color: #00AFEC;
+  border-color: #00AFEC; }
+
+.btn--back:hover::before {
+  opacity: 1;
+  background-color: #ffffff;
+  -webkit-transform: rotate3d(0, 0, 1, 0deg);
+  transform: rotate3d(0, 0, 1, 0deg);
+  transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1); }
+
 .download {
   display: flex; }
   .download--advantages {
@@ -614,6 +652,7 @@ ul, li {
       position: absolute;
       display: block;
       top: 25%;
+      left: center;
       width: 4rem;
       height: 4rem;
       z-index: 9;
@@ -631,6 +670,7 @@ ul, li {
       position: absolute;
       display: block;
       top: 24%;
+      left: center;
       width: 4rem;
       height: 4rem;
       z-index: 9;
@@ -647,6 +687,7 @@ ul, li {
       position: absolute;
       display: block;
       top: 25%;
+      left: center;
       width: 4rem;
       height: 4rem;
       z-index: 9;
@@ -1225,8 +1266,7 @@ ul, li {
 
 .s-news__item {
   width: 100%;
-  padding: 1rem 2rem;
-  padding-left: 0; }
+  padding: 1rem 2rem; }
   .s-news__item:hover .s-news__description {
     background: rgba(0, 0, 0, 0.7); }
 
@@ -1291,6 +1331,9 @@ ul, li {
   left: 50%;
   margin-left: -11rem;
   bottom: -5rem; }
+
+.s-advert__back {
+  align-self: flex-end; }
 
 @media (min-width: 768px) {
     .wrapper {
@@ -1424,6 +1467,7 @@ ul, li {
     .s-news__wrapper {
       margin-left: 0; }
     .s-news__item {
+      padding-left: 0;
       width: 50%; }
     .s-advert {
       width: 86%;
@@ -1503,6 +1547,8 @@ ul, li {
 
 @media (min-width: 1200px) {
     .btn--order {
+      width: 24rem; }
+    .btn--back {
       width: 24rem; }
       .b-board__item p:nth-of-type(odd) {
         font-size: 1.6rem; }
