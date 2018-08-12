@@ -652,7 +652,7 @@ ul, li {
       position: absolute;
       display: block;
       top: 25%;
-      left: center;
+      left: 30%;
       width: 4rem;
       height: 4rem;
       z-index: 9;
@@ -670,7 +670,7 @@ ul, li {
       position: absolute;
       display: block;
       top: 24%;
-      left: center;
+      left: 30%;
       width: 4rem;
       height: 4rem;
       z-index: 9;
@@ -687,7 +687,7 @@ ul, li {
       position: absolute;
       display: block;
       top: 25%;
-      left: center;
+      left: 30%;
       width: 4rem;
       height: 4rem;
       z-index: 9;
@@ -941,7 +941,7 @@ ul, li {
   background-color: #6EBD8E; }
 
 .s-slider {
-  height: 100vh;
+  height: calc(100vh - 7rem);
   background: url(../img/background_city.jpg);
   background-position: center;
   background-repeat: no-repeat;
@@ -1367,18 +1367,21 @@ ul, li {
       .b-features__item--best {
         border: 0.3rem solid #743C8E; }
         .b-features__item--best::after {
+          left: 37%;
           width: 5rem;
           height: 5rem;
           background-size: 5rem 5rem; }
       .b-features__item--count {
         border: 0.3rem solid #6EBD8E; }
         .b-features__item--count::after {
+          left: 37%;
           width: 5rem;
           height: 5rem;
           font-size: 5rem; }
       .b-features__item--all {
         border: 0.3rem solid #F29100; }
         .b-features__item--all::after {
+          left: 37%;
           width: 5rem;
           height: 5rem;
           background-size: 5rem 5rem; }
