@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
 	<meta charset="utf-8" />
-	<title>Catalog</title>
+	<title>Photo</title>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	
@@ -96,48 +96,61 @@
 		</nav>	
 	</header>
 	<div class="main">
-		<section class="s-catalog">
-			<div class="s-catalog__slider">
+		<section class="s-slider s-slider--buy">
+			<div class="s-slider__wrapper">
+
+				<header class="s-slider__header">
+						<h1 class="s-slider__title s-slider__title--shadow"><span>Riola</span> - фруктовый<br> вкус жизни!</h1>
+				</header>
+				<a href="catalog.html" class="btn btn--order">Заказать онлайн</a>
+			</div>
+		</section>
+		<section class="s-photo">
+			<div class="s-catalog__wrapper s-catalog__wrapper--cookies">
+				<p class="s-catalog__cookies">RIOLA/ТЕХНОЛОГИИ ВЫРАЩИВАНИЯ/ФОТО</p>
+			</div>
+			<header class="s-photo__header">
+				<h2 class="s-photo__title">Фото</h2>
+			</header>
+			<div class="s-photo__wrapper">
+				<div class="s-photo__box">
+					<div class="s-photo__box-half s-photo__box-half--first">
+						<div class="s-photo__img">
+							<img src="img/photo_p_1.jpg" alt="photo apple">
+						</div>
+						<div class="s-photo__img">
+							<img src="img/photo_p_2.jpg" alt="photo apple">
+						</div>
+					</div>
+					<div class="s-photo__box-half s-photo__box--second">
+						<div class="s-photo__img">
+							<img src="img/photo_p_3.jpg" alt="photo apple">
+						</div>
+						<div class="s-photo__img">
+							<img src="img/photo_p_4.jpg" alt="photo apple">
+						</div>
+					</div>
+				</div>
+				<div class="s-photo__box">
+					<div class="s-photo__box-half s-photo__box-half--third">
+						<div class="s-photo__img">
+							<img src="img/photo_p_5.jpg" alt="photo apple">
+						</div>
+					</div>
+					<div class="s-photo__box-half s-photo__box-half--fourth">
+						<div class="s-photo__img">
+							<img src="img/photo_p_6.jpg" alt="photo apple">
+						</div>
+						<div class="s-photo__img">
+							<img src="img/photo_p_6.jpg" alt="photo apple">
+						</div>
+					</div>
+				</div>
 				
 			</div>
-			<div class="s-catalog__wrapper s-catalog__wrapper--cookies">
-				<p class="s-catalog__cookies">RIOLA/ЯБЛОКИ</p>
-			</div>
-			<header class="s-catalog__header">
-				<h2 class="s-catalog__title">Яблоки</h2>
-			</header>
-			<div class="s-catalog__wrapper">
-				<div class="s-catalog__box">
-					<div class="s-catalog__img">
-						<img src="img/golden_delicious_500.png" alt="golden delicious">
-					</div>
-					<div class="s-catalog__name"><a href="golden.html" class="btn btn--catalog">Golden Delicious</a></div>
-					<div class="s-catalog__description">Один из самых популярных сортов яблок. Известен благодаря конфетному вкусу, сочности и яркому аромату.</div>
-				</div>
-				<div class="s-catalog__box">
-					<div class="s-catalog__img">
-						<img src="img/fuji_500.png" alt="fuji">
-					</div>
-					<div class="s-catalog__name"><a href="fuji" class="btn btn--catalog">Fuji</a></div>
-					<div class="s-catalog__description">Яблоки &laquo;Фуджи&raquo; на вкус более сладкие и хрустящие по сравнению со многими другими сортами яблок.</div>
-				</div>
-				<div class="s-catalog__box">
-					<div class="s-catalog__img">
-						<img src="img/grenny_smith_500.png" alt="granny smith">
-					</div>
-					<div class="s-catalog__name"><a href="granny.html" class=" btn btn--catalog">Granny Smith</a></div>
-					<div class="s-catalog__description">Яблоки имеют сладкий вкус с отчетливо ощутимой кислинкой. Особенность этого сорта - отсутствие аромата.</div>
-				</div>
-				<div class="s-catalog__box">
-					<div class="s-catalog__img">
-						<img src="img/gala_500.png" alt="gala">
-					</div>
-					<div class="s-catalog__name"><a href="gala.html" class="btn btn--catalog">Gala</a></div>
-					<div class="s-catalog__description">Сочное, кисловато-сладкое, хрустящее, с невероятно приятным свежим орехово-карамельным ароматом.</div>
-				</div>
-			</div>	
+			
+			
 		</section>
-
 		<section class="s-order">
 			<header class="s-order__header">
 				<h2 class="s-order__title">Связаться с нами</h2>
@@ -155,14 +168,13 @@
 				<a id="up">Наверх страницы</a>
 			</div>
 		</section>
-		
 
 	</div>
 	
 	<footer class="page-footer"> 
 		<div class="page-footer__wrapper">
 			<div class="page-footer__description">
-				<p>ООО &laquo;ПОДГОРНОЕ&raquo; ул. Мичурина 5, пгт. Слобожанское, <br>
+				<p>ООО &laquo;ФХ ПОДГОРНОЕ&raquo; ул. Мичурина 5, пгт. Слобожанское, <br>
 				Днепровский р-н, Днепропетровская обл. 52005</p>
 			</div>
 			<div class="page-footer__contacts">
@@ -195,82 +207,82 @@
 			</div>
 		</div>
 	</footer>
-	<div class="modal-overlay"></div>
-	<!-- Modal form call -->
-	
-	<div class="modal-wrapper-call">
-		<div class="modal-call">
-			<button class="modal-call__close" type="button" title="Закрыть">Закрыть</button>
-			<h3 class="modal-call__title">Заказать обратный звонок</h3>
-			<form class="form form--call" action="" method="post">
-				<div class="form__name">
-					<label for="name">Ваше имя:</label>
-					<input type="text" id="name" name="name">
-				</div>
-				<div class="form__phone">
-					<label for="phone">Ваш номер
-						<br>телефона
-						<span>*</span>
-					</label>
-					<input type="tel" id="phone" name="phone">
-				</div>
-				<p class="form__recall">Мы перезвоним Вам в течение 30 мин!</p>
-				<div class="form__time">
-					<label for="time">Или укажите удобное
-						<br> для вас время:</label>
-					<input type="text" id="time" name="time">
-				</div>
-				<button class="btn btn--form-call" type="submit">Перезвонить</button>
-				<p class="form__required">(
-					<span>*</span>) - обязательные поля для заполнения</p>
-			</form>
-		</div>
+<div class="modal-overlay"></div>
+<!-- Modal form call -->
+
+<div class="modal-wrapper-call">
+	<div class="modal-call">
+		<button class="modal-call__close" type="button" title="Закрыть">Закрыть</button>
+		<h3 class="modal-call__title">Заказать обратный звонок</h3>
+		<form class="form form--call" action="" method="post">
+			<div class="form__name">
+				<label for="name">Ваше имя:</label>
+				<input type="text" id="name" name="name">
+			</div>
+			<div class="form__phone">
+				<label for="phone">Ваш номер
+					<br>телефона
+					<span>*</span>
+				</label>
+				<input type="tel" id="phone" name="phone">
+			</div>
+			<p class="form__recall">Мы перезвоним Вам в течение 30 мин!</p>
+			<div class="form__time">
+				<label for="time">Или укажите удобное
+					<br> для вас время:</label>
+				<input type="text" id="time" name="time">
+			</div>
+			<button class="btn btn--form-call" type="submit">Перезвонить</button>
+			<p class="form__required">(
+				<span>*</span>) - обязательные поля для заполнения</p>
+		</form>
 	</div>
-	
-	<!-- -Modal form mail- -->
-	<div class="modal-wrapper-mail">
-		<div class="modal-mail">
-			<button class="modal-mail__close" type="button" title="Закрыть">Закрыть</button>
-			<h3 class="modal-mail__title">Форма обратной связи</h3>
-			<form class="form form--mail" action="" method="post">
-				<div class="form__name">
-					<label for="name">Ваше имя:</label>
-					<input type="text" id="name_mail" name="name">
-				</div>
-				<div class="form__mail">
-					<label for="mail">Ваш E-mail
-						<span>*</span>
-					</label>
-					<input type="email" id="mail" name="mail">
-				</div>
-				<div class="form__message">
-					<label for="mess">Ваше сообщение:</label>
-					<textarea id="mess" name="message" rows="3"></textarea>
-				</div>
-				<button class="btn btn--form-mail" type="submit">Отправить</button>
-				<p class="form__required">(
-					<span>*</span>) - обязательные поля для заполнения</p>
-			</form>
-		</div>
+</div>
+
+<!-- -Modal form mail- -->
+<div class="modal-wrapper-mail">
+	<div class="modal-mail">
+		<button class="modal-mail__close" type="button" title="Закрыть">Закрыть</button>
+		<h3 class="modal-mail__title">Форма обратной связи</h3>
+		<form class="form form--mail" action="" method="post">
+			<div class="form__name">
+				<label for="name">Ваше имя:</label>
+				<input type="text" id="name_mail" name="name">
+			</div>
+			<div class="form__mail">
+				<label for="mail">Ваш E-mail
+					<span>*</span>
+				</label>
+				<input type="email" id="mail" name="mail">
+			</div>
+			<div class="form__message">
+				<label for="mess">Ваше сообщение:</label>
+				<textarea id="mess" name="message" rows="3"></textarea>
+			</div>
+			<button class="btn btn--form-mail" type="submit">Отправить</button>
+			<p class="form__required">(
+				<span>*</span>) - обязательные поля для заполнения</p>
+		</form>
 	</div>
-	
-	
-	
-	<!-- <div class="under"></div> -->
-	
-	<!--[if lt IE 9]>
-		<script src="libs/html5shiv/es5-shim.min.js"></script>
-		<script src="libs/html5shiv/html5shiv.min.js"></script>
-		<script src="libs/html5shiv/html5shiv-printshiv.min.js"></script>
-		<script src="libs/respond/respond.min.js"></script>
-		<![endif]-->
-	
-	<script src="libs/jquery/jquery-2.1.3.min.js"></script>
-	
-	<script src="js/common.js"></script>
-	<!-- Yandex.Metrika counter -->
-	<!-- /Yandex.Metrika counter -->
-	<!-- Google Analytics counter -->
-	<!-- /Google Analytics counter -->
+</div>
+
+
+
+<!-- <div class="under"></div> -->
+
+<!--[if lt IE 9]>
+	<script src="libs/html5shiv/es5-shim.min.js"></script>
+	<script src="libs/html5shiv/html5shiv.min.js"></script>
+	<script src="libs/html5shiv/html5shiv-printshiv.min.js"></script>
+	<script src="libs/respond/respond.min.js"></script>
+	<![endif]-->
+
+<script src="libs/jquery/jquery-2.1.3.min.js"></script>
+
+<script src="js/common.js"></script>
+<!-- Yandex.Metrika counter -->
+<!-- /Yandex.Metrika counter -->
+<!-- Google Analytics counter -->
+<!-- /Google Analytics counter -->
 </body>
 </html>

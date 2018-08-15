@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
 	<meta charset="utf-8" />
-	<title>Catalog</title>
+	<title>News</title>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	
@@ -96,48 +96,57 @@
 		</nav>	
 	</header>
 	<div class="main">
-		<section class="s-catalog">
-			<div class="s-catalog__slider">
+		<section class="s-slider s-slider--buy">
+			<div class="s-slider__wrapper">
+				<header class="s-slider__header">
+						<h1 class="s-slider__title s-slider__title--shadow"><span>Riola</span> - фруктовый<br> вкус жизни!</h1>
+				</header>
+				<a href="catalog.html" class="btn btn--order">Заказать онлайн</a>
+			</div>
+		</section>
+		<section class="s-news">
+			<div class="s-catalog__wrapper s-catalog__wrapper--cookies">
+				<p class="s-catalog__cookies">RIOLA/О КОМПАНИИ/НОВОСТИ</p>
+			</div>
+			<header class="s-news__header">
+				<h2 class="s-news__title">Новости компании</h2>
+			</header>
+			<div class="s-news__links">
+				<a href="news_1.html" class="s-news__box">
+					<div class="s-news__img">
+						<img src="img/news_p_1.jpg" alt="news 1">
+					</div>
+					<p class="s-news__name">Готовимся к сбору урожая 2018!</p>
+					<div class="s-news__description">Уже сейчас вся наша Компания готовится к сбору урожая 2018! Правильно собрать яблоки – один из основных критериев их дальнейшего срока хранения. Поэтому необходимо правильно собрать урожай, соблюдая некоторые правила:
+					</div>
+					<p class="s-news__read">Читать дальше</p>	
+				</a>
+				<a href="news_2.html" class="s-news__box">
+					<div class="s-news__img">
+						<img src="img/news_p_2.jpg" alt="news 2">
+					</div>
+					<p class="s-news__name">Новые саженцы - отличный результат!</p>
+					<div class="s-news__description">Новые саженцы с лучших Европейских питомников уже дали свои плоды! Италия лидирующая страна в мире по выращиванию яблок. Мы работаем с итальянским консультантом, вместе с которым мы довели продукт до настоящего итальянского качества.
+					</div>
+					<p class="s-news__read">Читать дальше</p>		
+				</a>
+				<a href="news_3.html" class="s-news__box">
+					<div class="s-news__img">
+						<img src="img/news_p_3.jpg" alt="news 3">
+					</div>
+					<p class="s-news__name">Эффективная система полива садов</p>
+					<div class="s-news__description">Сочность яблок напрямую зависит от влажности почвы. Наши системы полива обеспечивают оптимальные условия для самого идеального созревания яблок.   В условиях нехватки воды бережливая система полива плодового сада приобретает все большую популярность.
+					</div>
+					<p class="s-news__read">Читать дальше</p>			
+				</a>
 				
 			</div>
-			<div class="s-catalog__wrapper s-catalog__wrapper--cookies">
-				<p class="s-catalog__cookies">RIOLA/ЯБЛОКИ</p>
-			</div>
-			<header class="s-catalog__header">
-				<h2 class="s-catalog__title">Яблоки</h2>
-			</header>
-			<div class="s-catalog__wrapper">
-				<div class="s-catalog__box">
-					<div class="s-catalog__img">
-						<img src="img/golden_delicious_500.png" alt="golden delicious">
-					</div>
-					<div class="s-catalog__name"><a href="golden.html" class="btn btn--catalog">Golden Delicious</a></div>
-					<div class="s-catalog__description">Один из самых популярных сортов яблок. Известен благодаря конфетному вкусу, сочности и яркому аромату.</div>
-				</div>
-				<div class="s-catalog__box">
-					<div class="s-catalog__img">
-						<img src="img/fuji_500.png" alt="fuji">
-					</div>
-					<div class="s-catalog__name"><a href="fuji" class="btn btn--catalog">Fuji</a></div>
-					<div class="s-catalog__description">Яблоки &laquo;Фуджи&raquo; на вкус более сладкие и хрустящие по сравнению со многими другими сортами яблок.</div>
-				</div>
-				<div class="s-catalog__box">
-					<div class="s-catalog__img">
-						<img src="img/grenny_smith_500.png" alt="granny smith">
-					</div>
-					<div class="s-catalog__name"><a href="granny.html" class=" btn btn--catalog">Granny Smith</a></div>
-					<div class="s-catalog__description">Яблоки имеют сладкий вкус с отчетливо ощутимой кислинкой. Особенность этого сорта - отсутствие аромата.</div>
-				</div>
-				<div class="s-catalog__box">
-					<div class="s-catalog__img">
-						<img src="img/gala_500.png" alt="gala">
-					</div>
-					<div class="s-catalog__name"><a href="gala.html" class="btn btn--catalog">Gala</a></div>
-					<div class="s-catalog__description">Сочное, кисловато-сладкое, хрустящее, с невероятно приятным свежим орехово-карамельным ароматом.</div>
-				</div>
-			</div>	
+			
+			
 		</section>
 
+
+		
 		<section class="s-order">
 			<header class="s-order__header">
 				<h2 class="s-order__title">Связаться с нами</h2>
@@ -145,7 +154,7 @@
 			<div class="s-order__wrapper">
 				<p class="s-order__description">Готовы сотрудничать с нами?<br>
 				Или возникли вопросы?</p>
-				<p class="s-order__phone"><a href="tel:+38(056)3739271">+38 (056) 373-92-71</a></p>
+				<p class="s-order__phone"><a href="tel:+38(056)3739271">+38(056) 373-92-71</a></p>
 				<p class="s-order__mail"><a href="mailto:riola.fruit@gmail.com">riola.fruit@gmail.com</a></p>
 				<div class="s-order__buttons">
 					<button class="btn btn--call">Перезвонить мне</button><button class="btn btn--send">Отправить запрос</button>
@@ -155,14 +164,13 @@
 				<a id="up">Наверх страницы</a>
 			</div>
 		</section>
-		
 
 	</div>
 	
 	<footer class="page-footer"> 
 		<div class="page-footer__wrapper">
 			<div class="page-footer__description">
-				<p>ООО &laquo;ПОДГОРНОЕ&raquo; ул. Мичурина 5, пгт. Слобожанское, <br>
+				<p>ООО &laquo;ФХ ПОДГОРНОЕ&raquo; ул. Мичурина 5, пгт. Слобожанское, <br>
 				Днепровский р-н, Днепропетровская обл. 52005</p>
 			</div>
 			<div class="page-footer__contacts">
