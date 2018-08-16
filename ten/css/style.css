@@ -401,14 +401,14 @@ ul, li {
   list-style: none; }
 
 .social__link {
-  width: 3rem;
-  height: 3rem;
+  width: 4rem;
+  height: 4rem;
   border-radius: 50%;
   display: block;
   font-size: 0;
   text-decoration: none;
   margin-right: 2rem;
-  background-size: 3rem;
+  background-size: 4rem 4rem;
   background-repeat: no-repeat;
   background-position: center center;
   background-color: #ffffff; }
@@ -426,6 +426,7 @@ ul, li {
   display: block;
   letter-spacing: 1.1px;
   font-size: 1.8rem;
+  line-height: 2.4rem;
   text-decoration: none;
   text-transform: uppercase;
   -webkit-hyphens: auto;
@@ -450,61 +451,134 @@ ul, li {
     position: relative;
     padding: 1.2rem;
     font-size: 1.2rem;
+    line-height: 1.6rem;
     margin-bottom: 2rem;
     text-align: center;
     background-color: #5db431; }
     .btn--buy:hover {
       background-color: #d82428; }
+    .btn--buy::after {
+      content: "";
+      position: absolute;
+      display: block;
+      top: 1.1rem;
+      right: 5rem;
+      width: 1.7rem;
+      height: 1.7rem;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-image: url(../img/basket.svg); }
   .btn--ask {
     width: 100%;
+    position: relative;
     padding: 1.2rem;
     font-size: 1.2rem;
-    text-align: center;
+    line-height: 1.6rem;
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
     background-color: #5db431; }
     .btn--ask:hover {
-      background-color: rgba(93, 180, 49, 0.9); }
+      background-color: #d82428; }
+    .btn--ask::after {
+      content: "";
+      position: absolute;
+      display: block;
+      top: 1.1rem;
+      right: 5rem;
+      width: 1.7rem;
+      height: 1.7rem;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-image: url(../img/mark.svg); }
   .btn--get {
     width: 100%;
+    position: relative;
     padding: 1.2rem;
     font-size: 1.2rem;
-    text-align: center;
+    line-height: 1.6rem;
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
     background-color: #d82428; }
     .btn--get:hover {
-      background-color: rgba(216, 36, 40, 0.9); }
+      background-color: #5db431; }
+    .btn--get::after {
+      content: "";
+      position: absolute;
+      display: block;
+      top: 1.1rem;
+      right: 5rem;
+      width: 1.7rem;
+      height: 1.7rem;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-image: url(../img/basket.svg); }
   .btn--form-call {
     letter-spacing: 0.2px;
     position: relative;
     width: 50%;
-    padding: 1.2rem;
     font-family: 'Circe', sans-serif;
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: normal;
+    padding-right: 3rem;
     background-color: #d82428; }
+    .btn--form-call::after {
+      content: "";
+      position: absolute;
+      display: block;
+      top: 0.7rem;
+      right: 2rem;
+      width: 1.4rem;
+      height: 1.4rem;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-image: url(../img/phone_simple.svg); }
   .btn--form-order {
     letter-spacing: 0.2px;
     position: relative;
     width: 50%;
-    padding: 1.2rem;
     font-family: 'Circe', sans-serif;
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: normal;
+    line-height: 1.4rem;
+    padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
+    padding-right: 2.5rem;
     background-color: #5db431; }
+    .btn--form-order::after {
+      content: "";
+      position: absolute;
+      display: block;
+      top: 0.6rem;
+      right: 2rem;
+      width: 1.5rem;
+      height: 1.5rem;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-image: url(../img/mark.svg); }
   .btn--form-mail {
     letter-spacing: 0.2px;
     align-self: flex-end;
     position: relative;
     width: 50%;
     font-family: 'Circe', sans-serif;
-    padding: 1.2rem;
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: normal;
     margin-top: 2rem;
-    text-align: center;
+    padding-right: 3rem;
+    padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
     background-color: #d82428; }
+    .btn--form-mail::after {
+      content: "";
+      position: absolute;
+      display: block;
+      top: 1.3rem;
+      right: 3rem;
+      width: 1.8rem;
+      height: 1.8rem;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-image: url(../img/mail_simple.svg); }
   .btn--form-calc {
     letter-spacing: 0.2px;
     position: relative;
@@ -512,7 +586,7 @@ ul, li {
     font-family: 'Circe', sans-serif;
     font-size: 1rem;
     font-weight: normal;
-    text-align: center;
+    line-height: 1.4rem;
     padding-top: 0.7rem;
     padding-bottom: 0.7rem;
     background-color: #d82428; }
@@ -523,19 +597,27 @@ ul, li {
     font-family: 'Circe', sans-serif;
     font-size: 1rem;
     font-weight: normal;
-    text-align: center;
+    line-height: 1.4rem;
     padding-top: 0.7rem;
     padding-bottom: 0.7rem;
     background-color: #d82428; }
+    .btn--form-buy::after {
+      content: "";
+      position: absolute;
+      display: block;
+      top: 0.6rem;
+      right: 2rem;
+      width: 1.7rem;
+      height: 1.7rem;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-image: url(../img/basket.svg); }
   .btn--excur {
     letter-spacing: 0.2px;
     width: 50%;
     font-family: 'Circe', sans-serif;
     font-size: 1rem;
     font-weight: normal;
-    text-align: center;
-    padding-top: 0.7rem;
-    padding-bottom: 0.7rem;
     background-color: #d82428; }
   .btn--video {
     letter-spacing: 0.2px;
@@ -544,8 +626,6 @@ ul, li {
     font-family: 'Circe', sans-serif;
     font-size: 1rem;
     font-weight: normal;
-    padding-top: 0.7rem;
-    padding-bottom: 0.7rem;
     background-color: #5db431; }
 
 .modal-call {
@@ -949,7 +1029,8 @@ ul, li {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  background-color: #f1f1f1; }
+  background-color: #f1f1f1;
+  max-height: 100rem; }
   .page-header--catalog {
     background-image: url(../img/background_catalog.jpg); }
   .page-header--care {
@@ -961,7 +1042,7 @@ ul, li {
   .page-header--tech {
     background-image: url(../img/background_technology.jpg); }
   .page-header--photo {
-    background-image: url(../img/background_about_main.jpg); }
+    background-image: url(../img/background_photo.jpg); }
   .page-header--excursions {
     background-image: url(../img/background_photo.jpg); }
   .page-header--project {
@@ -1388,18 +1469,15 @@ ul, li {
   text-align: center;
   color: #ffffff;
   font-family: 'Circe';
-  font-size: 1.3rem;
-  margin-bottom: 0; }
-  .feature__data--exp {
-    text-transform: uppercase; }
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem; }
 
 .feature__description {
   text-align: center;
   margin-top: 0;
   margin-bottom: 1.5rem;
   font-family: 'Circe';
-  font-size: 1.3rem;
-  text-transform: uppercase;
+  font-size: 1rem;
   color: #ffffff; }
 
 .s-about__links {
@@ -1468,9 +1546,6 @@ ul, li {
       text-transform: uppercase;
       margin-bottom: 1rem;
       font-size: 1rem; }
-      .s-about__box-list ul li a {
-        text-transform: none;
-        color: #5db431; }
   .s-about__box-list p {
     font-size: 1rem; }
 
@@ -1633,7 +1708,7 @@ ul, li {
     background-repeat: no-repeat;
     background-size: 4rem 4rem; }
   .s-grow__box--pack {
-    background-image: url(../img/pallet.svg);
+    background-image: url(../img/pack.svg);
     background-position: 20% 50%;
     background-repeat: no-repeat;
     background-size: 4rem 4rem; }
@@ -1744,7 +1819,7 @@ ul, li {
   display: flex;
   flex-direction: column;
   justify-content: space-between; }
-  .s-tech__cult div {
+  .s-tech__cult img {
     width: 100%; }
   .s-tech__cult p {
     width: 100%; }
@@ -1753,7 +1828,7 @@ ul, li {
   display: flex;
   flex-direction: column;
   justify-content: space-between; }
-  .s-tech__water div {
+  .s-tech__water img {
     width: 100%;
     margin-top: 1rem; }
   .s-tech__water p {
@@ -2226,7 +2301,7 @@ ul, li {
   display: flex;
   flex-direction: column;
   padding-top: 3.5rem;
-  padding-bottom: 5rem;
+  padding-bottom: 10rem;
   background: url(../img/background_care.jpg) center center;
   background-repeat: no-repeat;
   background-size: cover; }
@@ -2306,14 +2381,16 @@ ul, li {
 .s-care__list {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
   margin-top: 2rem; }
 
 .s-care__percent {
   text-align: center;
   color: #ffffff;
   font-family: 'Circe';
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   margin-top: 0;
+  padding: 2.5rem 2rem;
   border-top-right-radius: 50%;
   border-bottom-right-radius: 50%;
   border-bottom-left-radius: 50%;
@@ -3285,9 +3362,8 @@ ul, li {
     .line-break {
       display: inline; }
     .social__link {
-      width: 3rem;
-      height: 3rem;
-      background-size: 3rem; }
+      width: 4rem;
+      height: 4rem; }
       .btn--order {
         width: 18rem;
         padding: 1.4rem 1rem;
@@ -3295,27 +3371,64 @@ ul, li {
         line-height: 1.8rem; }
       .btn--buy {
         padding: 1.4rem;
-        font-size: 1.3rem;
+        font-size: 1.4rem;
+        line-height: 1.8rem;
         margin-bottom: 3rem; }
+        .btn--buy::after {
+          top: 1.5rem;
+          right: 5.6rem;
+          width: 1.8rem;
+          height: 1.8rem; }
       .btn--ask {
-        padding: 1rem;
-        font-size: 1.3rem; }
+        padding: 1.4rem;
+        padding-right: 2.3rem;
+        font-size: 1.2rem;
+        line-height: 1.8rem; }
+        .btn--ask::after {
+          top: 1.3rem;
+          right: 5.6rem;
+          width: 1.8rem;
+          height: 1.8rem; }
       .btn--get {
-        padding: 1rem;
-        font-size: 1.3rem; }
+        padding: 1.4rem;
+        font-size: 1.2rem;
+        line-height: 1.8rem; }
+        .btn--get::after {
+          top: 1.3rem;
+          right: 5.6rem;
+          width: 2rem;
+          height: 2rem; }
       .btn--form-call {
         width: 50%;
-        padding: 1rem;
-        font-size: 1.3rem; }
+        padding-top: 0.7rem;
+        padding-bottom: 0.7rem;
+        font-size: 1.2rem; }
+        .btn--form-call::after {
+          top: 1rem;
+          right: 2.6rem;
+          width: 1.6rem;
+          height: 1.6rem; }
       .btn--form-order {
         width: 50%;
-        padding: 1rem;
-        font-size: 1.3rem; }
+        padding-top: 0.7rem;
+        padding-bottom: 0.7rem;
+        font-size: 1.1rem; }
+        .btn--form-order::after {
+          top: 0.9rem;
+          right: 1.4rem;
+          width: 1.8rem;
+          height: 1.8rem; }
       .btn--form-mail {
         width: 50%;
         margin-top: 3rem;
-        padding: 1rem;
-        font-size: 1.3rem; }
+        padding-top: 0.7rem;
+        padding-bottom: 0.7rem;
+        font-size: 1.2rem; }
+        .btn--form-mail::after {
+          top: 1.3rem;
+          right: 3.7rem;
+          width: 2.1rem;
+          height: 2.1rem; }
       .btn--form-calc {
         padding-top: 1.2rem;
         padding-bottom: 1.2rem;
@@ -3324,6 +3437,11 @@ ul, li {
         padding-top: 1.2rem;
         padding-bottom: 1.2rem;
         font-size: 1.4rem; }
+        .btn--form-buy::after {
+          top: 1.2rem;
+          right: 5.6rem;
+          width: 1.9rem;
+          height: 1.9rem; }
       .btn--excur {
         width: 50%;
         padding-top: 0.7rem;
@@ -3513,9 +3631,9 @@ ul, li {
         background-size: 8rem 8rem; }
     .feature__data {
       margin-top: 1rem;
-      font-size: 1.4rem; }
+      font-size: 1.6rem; }
     .feature__description {
-      font-size: 1.4rem; }
+      font-size: 1.3rem; }
     .s-about__links {
       flex-direction: row;
       flex-wrap: wrap;
@@ -3531,9 +3649,9 @@ ul, li {
         margin-top: 0;
         font-size: 1.1rem; }
     .s-about__box-trade {
-      width: 50%; }
+      width: 55%; }
     .s-about__box-list {
-      width: 45%; }
+      width: 40%; }
       .s-about__box-list ul {
         border-left: 0.5rem solid #9df740;
         padding-left: 2rem; }
@@ -3642,30 +3760,33 @@ ul, li {
     .s-tech__seeds {
       flex-direction: row; }
       .s-tech__seeds img {
-        width: 20%; }
+        width: 20%;
+        height: 100%; }
       .s-tech__seeds p {
         margin-top: 0;
         width: 75%; }
     .s-tech__cult {
       flex-direction: row; }
-      .s-tech__cult div {
-        width: 49%; }
+      .s-tech__cult img {
+        height: 100%;
+        width: 46%; }
       .s-tech__cult p {
-        width: 45%; }
+        width: 48%; }
     .s-tech__water {
       flex-direction: row; }
-      .s-tech__water div {
+      .s-tech__water img {
         margin-top: 0;
-        width: 47%; }
+        width: 46%;
+        height: 100%; }
       .s-tech__water p {
-        width: 49%; }
+        width: 48%; }
     .s-tech__clean {
       width: 46%; }
     .s-tech__pack {
-      width: 49%; }
+      width: 48%; }
       .s-tech__pack img {
         margin-top: 0;
-        width: 98%;
+        width: 96%;
         align-self: flex-end; }
     .s-photo__header {
       width: 86%;
@@ -3907,7 +4028,7 @@ ul, li {
       max-width: 1170px;
       margin: 0 auto; }
     .s-care {
-      padding-bottom: 6rem; }
+      padding-bottom: 12rem; }
     .s-care__header {
       width: 86%;
       max-width: 1170px;
@@ -3939,8 +4060,8 @@ ul, li {
       padding-left: 6rem;
       padding-right: 6rem; }
     .s-care__percent {
-      padding: 3.3rem 1.63rem;
-      font-size: 1.4rem; }
+      padding: 4rem 3.5rem;
+      font-size: 1.5rem; }
     .s-care__text {
       font-size: 1.5rem; }
     .s-care__demand {
@@ -4323,9 +4444,10 @@ ul, li {
     .line-break-tablet {
       display: none; }
     .social__link {
-      width: 3.5rem;
-      height: 3.5rem;
-      background-size: 3.5rem; }
+      width: 3.6rem;
+      height: 3.6rem;
+      margin-right: 1rem;
+      background-size: 3.6rem; }
       .btn--order {
         width: 20rem;
         padding: 1.6rem 1.2rem;
@@ -4333,27 +4455,71 @@ ul, li {
         line-height: 2rem; }
       .btn--buy {
         padding: 1.4rem;
-        font-size: 1.4rem; }
+        font-size: 1.3rem;
+        line-height: 2rem; }
+        .btn--buy::after {
+          top: 1.6rem;
+          right: 3.2rem;
+          width: 1.7rem;
+          height: 1.7rem; }
       .btn--ask {
         width: 50%;
-        padding: 1rem;
-        font-size: 1.4rem; }
+        padding: 1.4rem;
+        padding-right: 1.9rem;
+        font-size: 1.3rem;
+        line-height: 2rem; }
+        .btn--ask::after {
+          top: 1.4rem;
+          right: 0.8rem;
+          width: 1.7rem;
+          height: 1.7rem; }
       .btn--get {
         width: 50%;
-        padding: 1rem;
-        font-size: 1.4rem; }
+        padding: 1.4rem;
+        font-size: 1.3rem;
+        line-height: 2rem; }
+        .btn--get::after {
+          top: 1.4rem;
+          right: 2.8rem;
+          width: 2rem;
+          height: 2rem; }
       .btn--form-call {
         width: 50%;
-        padding: 1rem 0.5rem;
-        font-size: 1.4rem; }
+        padding-top: 0.8rem;
+        padding-bottom: 0.8rem;
+        padding-right: 2.1rem;
+        font-size: 1.3rem; }
+        .btn--form-call::after {
+          top: 1rem;
+          right: 0.6rem;
+          width: 1.7rem;
+          height: 1.7rem; }
       .btn--form-order {
         width: 50%;
-        padding: 1rem;
-        font-size: 1.4rem; }
+        padding-top: 0.8rem;
+        padding-bottom: 0.8rem;
+        padding-right: 2.8rem;
+        font-size: 1.3rem; }
+        .btn--form-order::after {
+          top: 1rem;
+          right: 1rem;
+          width: 1.8rem;
+          height: 1.8rem; }
       .btn--form-mail {
         width: 50%;
-        padding: 1rem;
-        font-size: 1.4rem; }
+        padding-top: 0.8rem;
+        padding-bottom: 0.8rem;
+        font-size: 1.3rem; }
+        .btn--form-mail::after {
+          top: 1.3rem;
+          right: 1.7rem;
+          width: 2.5rem;
+          height: 2.5rem; }
+        .btn--form-buy::after {
+          top: 1.1rem;
+          right: 3.2rem;
+          width: 2rem;
+          height: 2rem; }
       .btn--excur {
         width: 50%;
         padding-top: 0.8rem;
@@ -4475,9 +4641,9 @@ ul, li {
         background-size: 9rem 9rem; }
     .feature__data {
       margin-top: 1.2rem;
-      font-size: 1.5rem; }
+      font-size: 1.7rem; }
     .feature__description {
-      font-size: 1.5rem; }
+      font-size: 1.4rem; }
     .s-about__links {
       font-size: 1.5rem; }
     .s-about__item {
@@ -4671,7 +4837,7 @@ ul, li {
         width: 10rem;
         height: 0.6rem; }
     .s-care {
-      padding-bottom: 8rem; }
+      padding-bottom: 13rem; }
     .s-care__title {
       font-size: 2.1rem; }
       .s-care__title::after {
@@ -4688,8 +4854,8 @@ ul, li {
       padding-left: 7rem;
       padding-right: 7rem; }
     .s-care__percent {
-      padding: 4.5rem 2.72rem;
-      font-size: 1.5rem; }
+      padding: 4.5rem 4rem;
+      font-size: 1.7rem; }
     .s-care__text {
       font-size: 1.7rem; }
     .s-care__name-par {
@@ -4886,9 +5052,10 @@ ul, li {
         font-size: 1.3rem; } }
   @media (min-width: 1200px) {
     .social__link {
-      width: 4rem;
-      height: 4rem;
-      background-size: 4rem; }
+      width: 3.8rem;
+      height: 3.8rem;
+      margin-right: 2rem;
+      background-size: 3.8rem; }
       .btn--order {
         width: 24rem;
         padding: 2rem;
@@ -4897,29 +5064,73 @@ ul, li {
         margin-bottom: 10rem; }
       .btn--buy {
         padding: 1.5rem;
-        font-size: 1.6rem; }
+        font-size: 1.6rem;
+        line-height: 2.4rem; }
+        .btn--buy::after {
+          top: 1.7rem;
+          right: 3.6rem;
+          width: 2rem;
+          height: 2rem; }
       .btn--ask {
         padding: 1.5rem;
-        font-size: 1.6rem; }
+        padding-right: 2.5rem;
+        font-size: 1.6rem;
+        line-height: 2.4rem; }
+        .btn--ask::after {
+          top: 1.7rem;
+          right: 1.2rem;
+          width: 2rem;
+          height: 2rem; }
       .btn--get {
         padding: 1.5rem;
-        font-size: 1.6rem; }
+        font-size: 1.6rem;
+        line-height: 2.4rem; }
+        .btn--get::after {
+          top: 1.7rem;
+          right: 3.6rem;
+          width: 2.3rem;
+          height: 2.3rem; }
       .btn--form-call {
         width: 50%;
-        padding: 1.5rem;
-        font-size: 1.6rem; }
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        padding-right: 3rem;
+        font-size: 1.4rem; }
+        .btn--form-call::after {
+          top: 1.2rem;
+          right: 1.6rem;
+          width: 2rem;
+          height: 2rem; }
       .btn--form-order {
         width: 50%;
-        padding: 1.5rem;
-        font-size: 1.6rem; }
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        padding-right: 4rem;
+        font-size: 1.4rem; }
+        .btn--form-order::after {
+          top: 1.1rem;
+          right: 1.3rem;
+          width: 2.1rem;
+          height: 2.1rem; }
       .btn--form-mail {
         width: 50%;
-        padding: 1.5rem;
-        font-size: 1.6rem; }
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        font-size: 1.4rem; }
+        .btn--form-mail::after {
+          top: 1.4rem;
+          right: 2.8rem;
+          width: 2.6rem;
+          height: 2.6rem; }
       .btn--form-calc {
         font-size: 1.6rem; }
       .btn--form-buy {
         font-size: 1.6rem; }
+        .btn--form-buy::after {
+          top: 0.8rem;
+          right: 3.6rem;
+          width: 2.2rem;
+          height: 2.2rem; }
       .btn--excur {
         width: 50%;
         padding-top: 1rem;
@@ -5023,16 +5234,16 @@ ul, li {
         background-size: 10rem 10rem; }
     .feature__data {
       margin-top: 1.4rem;
-      font-size: 1.6rem; }
+      font-size: 1.8rem; }
     .feature__description {
-      font-size: 1.6rem; }
+      font-size: 1.5rem; }
     .s-about__links {
       font-size: 1.6rem; }
       .s-about__fields p {
         font-size: 1.6rem; }
         .s-about__box-list ul li {
           margin-bottom: 1.2rem;
-          font-size: 1.5rem; }
+          font-size: 1.6rem; }
       .s-about__box-list p {
         font-size: 1.6rem; }
       .s-lawn__title::after {
@@ -5213,7 +5424,7 @@ ul, li {
         width: 12rem;
         height: 0.7rem; }
     .s-care {
-      padding-bottom: 10rem; }
+      padding-bottom: 15rem; }
     .s-care__title {
       font-size: 2.4rem; }
       .s-care__title::after {
@@ -5230,8 +5441,8 @@ ul, li {
       padding-left: 8rem;
       padding-right: 8rem; }
     .s-care__percent {
-      padding: 5rem 3.03rem;
-      font-size: 1.6rem; }
+      padding: 5rem 4.5rem;
+      font-size: 1.8rem; }
     .s-care__text {
       font-size: 1.8rem; }
     .s-care__water-foto {
@@ -5404,15 +5615,4 @@ ul, li {
     .main-nav__items--no {
       display: none; }
     .s-about__features li {
-      width: 33%; }
-    .s-care__list li {
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      align-items: center;
-      min-width: 25%;
-      margin-right: 2rem; }
-    .s-care__percent {
-      padding-top: 3rem;
-      width: 9rem;
-      height: 9rem; } }
+      width: 33%; } }
