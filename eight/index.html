@@ -12,13 +12,20 @@
 <body>
 	
 	<header class="page-header">
+		<div class="page-header__button">
+			<button class="hamburger hamburger--3dx-r" type="button">
+				  <span class="hamburger-box">
+				    <span class="hamburger-inner"></span>
+				  </span>
+			</button>
+		</div>
 		<div class="page-header__second-menu">
 			<div class="page-header__wrapper">
 				<div class="page-header__links">
 					<ul class="page-header__list">
-						<li class="page-header__item"><a href="#">Дилерам</a></li>
-						<li class="page-header__item page-header__item--middle"><a href="#">Ритейлу</a></li>
-						<li class="page-header__item"><a href="#">Садоводам</a></li>
+						<li class="page-header__item"><a href="dealers.html">Дилерам</a></li>
+						<li class="page-header__item page-header__item--middle"><a href="retail.html">Ритейлу</a></li>
+						<li class="page-header__item"><a href="gardeners.html">Садоводам</a></li>
 					</ul>
 				</div>
 				<div class="page-header__contacts">
@@ -35,19 +42,20 @@
 			</div>
 		</div>
 		<nav class="main-nav">
-			<button class="main-nav__toggle" type="button">Открыть  меню
+			<!-- <button class="main-nav__toggle" type="button">Открыть  меню
 				<span class="main-nav__sandwich">
 					<span class="main-nav__line-top"></span>
 					<span class="main-nav__line-middle"></span>
 					<span class="main-nav__line-bottom"></span>
 				</span>
-			</button>
+			</button> -->
+			
 			<div class="main-nav__wrapper">
 				<div class="page-header__logo">
 					<a href="index.html"><img src="img/logo.svg" alt="logo"></a>
 				</div>
 				<ul class="main-nav__items">
-					<li class="menu-item menu-item--submenu current-menu-item"><a href="about.html">О компании</a>
+					<li class="menu-item menu-item--submenu current-menu-item"><a href="about.html">О компании</a><span class="menu-span"></span>
 						<ul class="main-nav__submenu">
 							<li><a href="about_us.html">О нас</a></li>
 							<li><a href="news.html">Новости</a></li>
@@ -57,7 +65,7 @@
 							<li><a href="team.html">Коллектив</a></li>
 						</ul>
 					</li>
-					<li class="menu-item menu-item--submenu"><a href="catalog.html">Яблоки</a>
+					<li class="menu-item menu-item--submenu"><a href="catalog.html">Яблоки</a><span class="menu-span"></span>
 						<ul class="main-nav__submenu">
 							<li><a href="golden.html">Golden Delicious</a></li>
 							<li><a href="fuji.html">Fuji</a></li>
@@ -66,7 +74,7 @@
 							<li><a href="pack.html">Упаковка</a></li>
 						</ul>
 					</li>
-					<li class="menu-item menu-item--submenu"><a href="grow.html">Технологии<br> выращивания</a>
+					<li class="menu-item menu-item--submenu"><a href="grow.html">Технологии<br> выращивания</a><span class="menu-span"></span>
 						<ul class="main-nav__submenu">
 							<li><a href="technology.html">Технологии</a></li>
 							<li><a href="excursions.html">Экскурсии</a></li>
@@ -74,8 +82,19 @@
 							<li><a href="video.html">Видео</a></li>
 						</ul>
 					</li>
-					<li class="menu-item"><a href="buy.html">Где купить</a></li>
-					<li class="menu-item"><a href="info.html">Информация</a></li>
+					<li class="menu-item"><a href="buy.html">Где купить?</a></li>
+					<li class="menu-item menu-item--submenu"><a href="info.html">Информация</a><span class="menu-span"></span>
+						<ul class="main-nav__submenu">
+							<li><a href="answer.html">Вопрос-Ответ</a></li>
+							<li><a href="recipe.html">Рецепты с яблоками</a></li>
+							<li><a href="how_grow.html">Как вырастить яблоню?</a></li>
+							<li><a href="benefit.html">Польза яблок</a></li>
+							<li><a href="about_golden.html">О яблоках Golden</a></li>
+							<li><a href="about_fuji.html">О яблоках Fuji</a></li>
+							<li><a href="about_granny.html">О яблоках Granny Smith</a></li>
+							<li><a href="about_gala.html">О яблоках Gala</a></li>
+						</ul>
+					</li>
 					<li class="menu-item"><a href="contacts.html">Контакты</a></li>
 				</ul>
 			</div>
@@ -90,7 +109,6 @@
 					<li>
 						<a class="social__link social__link--facebook" href="https://facebook.com/riola">Мы в Фейсбуке</a>
 					</li>
-
 				</ul>
 			</div>
 		</nav>	
@@ -285,7 +303,7 @@
 				<p class="s-delivery__description">Все ящики изготовлены из пятислойного картона оптимально высокой плотности, это обеспечивает прочность и надежное хранение продукции.</p>
 			</div>
 		</section>
-		<section class="s-order">
+		<section class="s-order" id="order">
 			<header class="s-order__header">
 				<h2 class="s-order__title">Связаться с нами</h2>
 			</header>

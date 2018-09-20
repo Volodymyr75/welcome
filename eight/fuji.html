@@ -16,9 +16,9 @@
 			<div class="page-header__wrapper">
 				<div class="page-header__links">
 					<ul class="page-header__list">
-						<li class="page-header__item"><a href="#">Дилерам</a></li>
-						<li class="page-header__item page-header__item--middle"><a href="#">Ритейлу</a></li>
-						<li class="page-header__item"><a href="#">Садоводам</a></li>
+						<li class="page-header__item"><a href="dealers.html">Дилерам</a></li>
+						<li class="page-header__item page-header__item--middle"><a href="retail.html">Ритейлу</a></li>
+						<li class="page-header__item"><a href="gardeners.html">Садоводам</a></li>
 					</ul>
 				</div>
 				<div class="page-header__contacts">
@@ -74,8 +74,35 @@
 							<li><a href="video.html">Видео</a></li>
 						</ul>
 					</li>
-					<li class="menu-item"><a href="buy.html">Где купить</a></li>
-					<li class="menu-item"><a href="info.html">Информация</a></li>
+					<li class="menu-item"><a href="buy.html">Где купить?</a></li>
+					<li class="menu-item menu-item--submenu"><a href="info.html">Информация</a>
+						<ul class="main-nav__submenu">
+							<li>
+								<a href="answer.html">Вопрос-Ответ</a>
+							</li>
+							<li>
+								<a href="recipe.html">Рецепты с яблоками</a>
+							</li>
+							<li>
+								<a href="how_grow.html">Как вырастить яблоню?</a>
+							</li>
+							<li>
+								<a href="benefit.html">Польза яблок</a>
+							</li>
+							<li>
+								<a href="about_golden.html">О яблоках Golden</a>
+							</li>
+							<li>
+								<a href="about_fuji.html">О яблоках Fuji</a>
+							</li>
+							<li>
+								<a href="about_granny.html">О яблоках Granny Smith</a>
+							</li>
+							<li>
+								<a href="about_gala.html">О яблоках Gala</a>
+							</li>
+						</ul>
+					</li>
 					<li class="menu-item"><a href="contacts.html">Контакты</a></li>
 				</ul>
 			</div>
@@ -187,7 +214,7 @@
 					</div>
 				</div>
 		</section>
-		<section class="s-order">
+		<section class="s-order" id="order">
 			<header class="s-order__header">
 				<h2 class="s-order__title">Связаться с нами</h2>
 			</header>
@@ -303,6 +330,213 @@
 		</div>
 	</div>
 	
+		<!-- -Modal form clarify- -->
+
+	<div class="modal-wrapper-clarify">
+		<div class="modal-clarify">
+			<button class="modal-clarify__close" type="button" title="Закрыть">Закрыть</button>
+			<h3 class="modal-clarify__title">Уточнить цену яблок RIOLA</h3>
+			<form class="form form--clarify" action="" method="post">
+				<div class="form__boxes">
+					<div class="form__box form__box--left">
+						<div class="form__city">
+							<label for="city">ГОРОД:</label>
+							<input type="text" id="city" name="city">
+						</div>
+						<div class="form__company">
+							<label for="company">КОМПАНИЯ:</label>
+							<input type="text" id="company" name="company">
+						</div>
+						<div class="form__profile">
+							<p class="form__text">ПРОФИЛЬ КОМПАНИИ:</p>
+							<div class="form__radio-profile">
+								<input type="radio" name="profile" value="gold" checked>РИТЕЙЛ<br>
+								<input type="radio" name="profile" value="fuji">ОПТОВИК<br>
+								<input type="radio" name="profile" value="granny">ДРУГОЕ<br>
+							</div>
+						</div>
+						<div class="form__type">
+							<p class="form__text">НАИМЕНОВАНИЕ:</p>
+							<div class="form__radio-type">
+								<input type="radio" name="type" value="gold" checked>GOLDEN DELICIOUS<br>
+								<input type="radio" name="type" value="fuji">FUJI<br>
+								<input type="radio" name="type" value="granny">GRANNY SMITH<br>
+								<input type="radio" name="type" value="gala">GALA<br>
+							</div>
+						</div>
+						<div class="form__sort">
+							<p class="form__text">СОРТ ЯБЛОК:</p>
+							<div class="form__radio-sort">
+								<input type="radio" name="sort" value="gold" checked>ПРЕМИУМ<br>
+								<input type="radio" name="sort" value="fuji">ВЫСШИЙ<br>
+								<input type="radio" name="sort" value="granny">1 СОРТ<br>
+								<input type="radio" name="sort" value="gala">2 СОРТ
+							</div>
+						</div>
+						<div class="form__volume">
+							<label for="volume">ЖЕЛАЕМЫЙ РАЗОВЫЙ<br> ОБЪЕМ ДОСТАВКИ (КГ):</label>
+							<input type="text" id="volume" name="volume">
+						</div>
+						<div class="form__need">
+							<p class="form__text">НЕОБХОДИМОСТЬ ДОСТАВКИ:</p>
+							<div class="form__radio-need">
+								<input type="radio" name="need" value="yes" checked>ДА
+								<input type="radio" name="need" value="no">НЕТ	
+							</div>
+						</div>
+					</div>
+					<div class="form__box form__box--right">
+						<div class="form__frequent">
+							<p class="form__text">ПРЕДПОЛАГАЕМАЯ<br> ЧАСТОТА ДОСТАВКИ:</p>
+							<div class="form__radio-frequent">
+								<input type="radio" name="frequent" value="once" checked>ЕДИНОРАЗОВО<br>
+								<input type="radio" name="frequent" value="three">3 РАЗА В НЕДЕЛЮ<br>
+								<input type="radio" name="frequent" value="two">2 РАЗА В НЕДЕЛЮ<br>
+								<input type="radio" name="frequent" value="one">1 РАЗ В НЕДЕЛЮ<br>
+								<input type="radio" name="frequent" value="half">2 РАЗА В МЕСЯЦ
+							</div>
+						</div>
+						<div class="form__pack">
+							<p class="form__text">ЖЕЛАЕМАЯ УПАКОВКА:</p>
+							<div class="form__radio-pack">
+								<input type="radio" name="pack" value="one" checked>ОДНОРЯДНЫЙ ГОФРО С ПЕЧАТЬЮ<br>
+								<input type="radio" name="pack" value="two_with">ДВУХРЯДНЫЙ ГОФРО С ПЕЧАТЬЮ<br>
+								<input type="radio" name="pack" value="two">ДВУХРЯДНЫЙ ГОФРО<br>
+								<input type="radio" name="pack" value="pull">ПУЛЛИНГОВАЯ ТАРА<br>
+								<input type="radio" name="pack" value="own">СВОЯ ТАРА
+							</div>
+						</div>
+						<div class="form__person">
+							<label for="person">Ваше имя:</label>
+							<input type="text" id="person" name="person">
+						</div>
+						<div class="form__tel">
+							<label for="tel">Ваш телефон:
+								<span>*</span>
+							</label>
+							<input type="tel" id="tel" name="tel">
+						</div>
+						<div class="form__email">
+							<label for="email">Ваш E-mail:
+								<span>*</span>
+							</label>
+							<input type="text" id="email" name="email">
+						</div>
+						<div class="form__report">
+							<label for="report">Комментарии:</label>
+							<textarea id="report" name="report" rows="1"></textarea>
+						</div>
+						<button class="btn btn--form-clarify" type="submit">Уточнить цену</button>
+					</div>
+					
+				</div>
+			</form>
+		</div>
+	</div>
+
+	<!-- -Modal form  buy- -->
+
+	<div class="modal-wrapper-buy">
+		<div class="modal-buy">
+			<button class="modal-buy__close" type="button" title="Закрыть">Закрыть</button>
+			<h3 class="modal-buy__title">Купить яблоки RIOLA</h3>
+			<form class="form form--buy" action="" method="post">
+				<div class="form__boxes">
+					<div class="form__box form__box--left">
+						<div class="form__city">
+							<label for="city-b">ГОРОД:</label>
+							<input type="text" id="city-b" name="city-b">
+						</div>
+						<div class="form__company">
+							<label for="company-b">КОМПАНИЯ:</label>
+							<input type="text" id="company-b" name="company-b">
+						</div>
+						<div class="form__profile">
+							<p class="form__text">ПРОФИЛЬ КОМПАНИИ:</p>
+							<div class="form__radio-profile">
+								<input type="radio" name="profile" value="gold" checked>РИТЕЙЛ<br>
+								<input type="radio" name="profile" value="fuji">ОПТОВИК<br>
+								<input type="radio" name="profile" value="granny">ДРУГОЕ<br>
+							</div>
+						</div>
+						<div class="form__type">
+							<p class="form__text">НАИМЕНОВАНИЕ:</p>
+							<div class="form__radio-type">
+								<input type="radio" name="type" value="gold" checked>GOLDEN DELICIOUS<br>
+								<input type="radio" name="type" value="fuji">FUJI<br>
+								<input type="radio" name="type" value="granny">GRANNY SMITH<br>
+								<input type="radio" name="type" value="gala">GALA<br>
+							</div>
+						</div>
+						<div class="form__sort">
+							<p class="form__text">СОРТ ЯБЛОК:</p>
+							<div class="form__radio-sort">
+								<input type="radio" name="sort" value="gold" checked>ПРЕМИУМ<br>
+								<input type="radio" name="sort" value="fuji">ВЫСШИЙ<br>
+								<input type="radio" name="sort" value="granny">1 СОРТ<br>
+								<input type="radio" name="sort" value="gala">2 СОРТ
+							</div>
+						</div>
+						<div class="form__volume">
+							<label for="volume-b">ЖЕЛАЕМЫЙ РАЗОВЫЙ<br> ОБЪЕМ ДОСТАВКИ (КГ):</label>
+							<input type="text" id="volume-b" name="volume-b">
+						</div>
+						<div class="form__need">
+							<p class="form__text">НЕОБХОДИМОСТЬ ДОСТАВКИ:</p>
+							<div class="form__radio-need">
+								<input type="radio" name="need" value="yes" checked>ДА
+								<input type="radio" name="need" value="no">НЕТ	
+							</div>
+						</div>
+					</div>
+					<div class="form__box form__box--right">
+						<div class="form__frequent">
+							<p class="form__text">ПРЕДПОЛАГАЕМАЯ<br> ЧАСТОТА ДОСТАВКИ:</p>
+							<div class="form__radio-frequent">
+								<input type="radio" name="frequent" value="once" checked>ЕДИНОРАЗОВО<br>
+								<input type="radio" name="frequent" value="three">3 РАЗА В НЕДЕЛЮ<br>
+								<input type="radio" name="frequent" value="two">2 РАЗА В НЕДЕЛЮ<br>
+								<input type="radio" name="frequent" value="one">1 РАЗ В НЕДЕЛЮ<br>
+								<input type="radio" name="frequent" value="half">2 РАЗА В МЕСЯЦ
+							</div>
+						</div>
+						<div class="form__pack">
+							<p class="form__text">ЖЕЛАЕМАЯ УПАКОВКА:</p>
+							<div class="form__radio-pack">
+								<input type="radio" name="pack" value="one" checked>ОДНОРЯДНЫЙ ГОФРО С ПЕЧАТЬЮ<br>
+								<input type="radio" name="pack" value="two_with">ДВУХРЯДНЫЙ ГОФРО С ПЕЧАТЬЮ<br>
+								<input type="radio" name="pack" value="two">ДВУХРЯДНЫЙ ГОФРО<br>
+								<input type="radio" name="pack" value="pull">ПУЛЛИНГОВАЯ ТАРА<br>
+								<input type="radio" name="pack" value="own">СВОЯ ТАРА
+							</div>
+						</div>
+						<div class="form__person">
+							<label for="person-b">Ваше имя:</label>
+							<input type="text" id="person-b" name="person-b">
+						</div>
+						<div class="form__tel">
+							<label for="tel-b">Ваш телефон:
+								<span>*</span>
+							</label>
+							<input type="tel" id="tel-b" name="tel-b">
+						</div>
+						<div class="form__email">
+							<label for="email-b">Ваш E-mail:
+								<span>*</span>
+							</label>
+							<input type="text" id="email-b" name="email-b">
+						</div>
+						<div class="form__report">
+							<label for="report-b">Комментарии:</label>
+							<textarea id="report-b" name="report-b" rows="1"></textarea>
+						</div>
+						<button class="btn btn--form-buy" type="submit">Купить</button>
+					</div>
+					
+				</div>
+			</form>
+		</div>
+	</div>
 	
 	
 	<!-- <div class="under"></div> -->
