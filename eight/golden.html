@@ -12,6 +12,13 @@
 <body>
 	
 	<header class="page-header">
+		<div class="page-header__button">
+			<button class="hamburger hamburger--3dx-r" type="button">
+				  <span class="hamburger-box">
+				    <span class="hamburger-inner"></span>
+				  </span>
+			</button>
+		</div>
 		<div class="page-header__second-menu">
 			<div class="page-header__wrapper">
 				<div class="page-header__links">
@@ -35,19 +42,19 @@
 			</div>
 		</div>
 		<nav class="main-nav">
-			<button class="main-nav__toggle" type="button">Открыть  меню
+			<!-- <button class="main-nav__toggle" type="button">Открыть  меню
 				<span class="main-nav__sandwich">
 					<span class="main-nav__line-top"></span>
 					<span class="main-nav__line-middle"></span>
 					<span class="main-nav__line-bottom"></span>
 				</span>
-			</button>
+			</button> -->
 			<div class="main-nav__wrapper">
 				<div class="page-header__logo">
 					<a href="index.html"><img src="img/logo.svg" alt="logo"></a>
 				</div>
 				<ul class="main-nav__items">
-					<li class="menu-item menu-item--submenu current-menu-item"><a href="about.html">О компании</a>
+					<li class="menu-item menu-item--submenu current-menu-item"><a href="about.html">О компании</a><span class="menu-span"></span>
 						<ul class="main-nav__submenu">
 							<li><a href="about_us.html">О нас</a></li>
 							<li><a href="news.html">Новости</a></li>
@@ -57,7 +64,7 @@
 							<li><a href="team.html">Коллектив</a></li>
 						</ul>
 					</li>
-					<li class="menu-item menu-item--submenu"><a href="catalog.html">Яблоки</a>
+					<li class="menu-item menu-item--submenu"><a href="catalog.html">Яблоки</a><span class="menu-span"></span>
 						<ul class="main-nav__submenu">
 							<li><a href="golden.html">Golden Delicious</a></li>
 							<li><a href="fuji.html">Fuji</a></li>
@@ -66,7 +73,7 @@
 							<li><a href="pack.html">Упаковка</a></li>
 						</ul>
 					</li>
-					<li class="menu-item menu-item--submenu"><a href="grow.html">Технологии<br> выращивания</a>
+					<li class="menu-item menu-item--submenu"><a href="grow.html">Технологии<br> выращивания</a><span class="menu-span"></span>
 						<ul class="main-nav__submenu">
 							<li><a href="technology.html">Технологии</a></li>
 							<li><a href="excursions.html">Экскурсии</a></li>
@@ -75,7 +82,7 @@
 						</ul>
 					</li>
 					<li class="menu-item"><a href="buy.html">Где купить?</a></li>
-					<li class="menu-item menu-item--submenu"><a href="info.html">Информация</a>
+					<li class="menu-item menu-item--submenu"><a href="info.html">Информация</a><span class="menu-span"></span>
 						<ul class="main-nav__submenu">
 							<li>
 								<a href="answer.html">Вопрос-Ответ</a>
@@ -286,7 +293,7 @@
 				</div>
 				<div class="form__phone">
 					<label for="phone">Ваш номер
-						<br>телефона
+						<br class="line-break">телефона
 						<span>*</span>
 					</label>
 					<input type="tel" id="phone" name="phone">
@@ -294,7 +301,7 @@
 				<p class="form__recall">Мы перезвоним Вам в течение 30 мин!</p>
 				<div class="form__time">
 					<label for="time">Или укажите удобное
-						<br> для вас время:</label>
+						<br class="line-break"> для вас время:</label>
 					<input type="text" id="time" name="time">
 				</div>
 				<button class="btn btn--form-call" type="submit">Перезвонить</button>
