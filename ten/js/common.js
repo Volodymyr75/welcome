@@ -1,12 +1,19 @@
 $(document).ready(function() {
 
+	// добавляем спан для создания стрелки в пункт меню, где есть подменю
+
+	$(".main-nav__submenu").before("<span class='menu-span'></span>");
+
 
 
 	var $hamburger = $(".hamburger");
 			  $hamburger.on("click", function(e) {
 			  $(this).toggleClass("is-active");
+
+			  // Do something else, like open/close menu
 			  $(".page-header__group-menu").toggleClass("active");
-	    // Do something else, like open/close menu
+			  $(".page-header").toggleClass("active");
+	    
 	  });
 
 	// var $navMain = $(".main-nav");
@@ -81,27 +88,106 @@ $(document).ready(function() {
 	    }, 800);  
     });
 
+
+
+
+	$(".menu-span").on('click', function(e) { 
+	    e.preventDefault();
+
+	    var menu = $(this).next();
+	    var isClosed = menu.is(':hidden'); // закрыто ли подменю, по которому кликнули 
+	 
+	    $('.main-nav__submenu').slideUp(100); // закрываем все подменю
+	    $(".menu-span").removeClass("active");
+	 
+	    // если меню было закрыто, то открываем его 
+	    if (isClosed) { 
+	      menu.slideDown(200);
+	      $(this).addClass("active");
+	    } 
+	  }); 
+
+
+
+
+$("#popup-ask, #popup-ask-btn").on("click", function(event) {
+		  event.preventDefault();
+		  $('#overlay').addClass('open');
+		  $('#overlay-content1').addClass('open');
+	});
+
+$("#popup-buy").on("click", function(event) {
+		  event.preventDefault();
+		  $('#overlay').addClass('open');
+		  $('#overlay-content2').addClass('open');
+	});
+
+$("#popup-ex").on("click", function(event) {
+		  event.preventDefault();
+		  $('#overlay').addClass('open');
+		  $('#overlay-content3').addClass('open');
+	});
+
+$('#overlay-background,#overlay-close-call, #overlay-close-mail, #overlay-close-ex ').click(function() {
+      $('#overlay').removeClass('open');
+      $('#overlay-content1').removeClass('open');
+      $('#overlay-content2').removeClass('open');
+      $('#overlay-content3').removeClass('open');
+    });
+
+
+	var $calculateHeight;
+
+  $calculateHeight = function() {
+    var $content, contentHeight, finalHeight, windowHeight;
+    $content = $('#overlay-content1');
+    contentHeight = parseInt($content.height());
+    windowHeight = $(window).height();
+    finalHeight = windowHeight > contentHeight ? windowHeight : contentHeight;
+    return finalHeight;
+  };
+
+
+
+function heightDetect() {
+		$("#overlay-background").height($calculateHeight);
+	};
+	heightDetect();
+	$(window).resize(function() {
+		heightDetect();
+	});
+
+
+
+//   $(document).ready(function() {
+//     $(window).resize(function() {
+//       if ($(window).height() < 560 && $(window).width() > 600) {
+//         $('#overlay').addClass('short');
+//       } else {
+//         $('#overlay').removeClass('short');
+//       }
+//       return $('#overlay-background').height($calculateHeight());
+//     });
+//     $(window).trigger('resize');
+    
+//     // open
+//     $('#popup-trigger').click(function() {
+//       return $('#overlay').addClass('open');
+//     });
+
+
+// 	$("#popup-trigger").on("click", function(event) {
+// 		  event.preventDefault();
+// 		  $('#overlay').addClass('open');
+// 	});
+    
+//     // close
+//     return $('#overlay-background,#overlay-close').click(function() {
+//       return $('#overlay').removeClass('open');
+//     });
+//   });
+
 });
-
-
-$(".menu-span").on('click', function(e) { 
-    e.preventDefault();
-
-    var menu = $(this).next();
-    var isClosed = menu.is(':hidden'); // закрыто ли подменю, по которому кликнули 
- 
-    $('.main-nav__submenu').slideUp(100); // закрываем все подменю
-    $(".menu-span").removeClass("active");
- 
-    // если меню было закрыто, то открываем его 
-    if (isClosed) { 
-      menu.slideDown(200);
-      $(this).addClass("active");
-    } 
-  }); 
-
-
-
 // $(window).load(function() {
 
 // 	$(".loader_inner").fadeOut();

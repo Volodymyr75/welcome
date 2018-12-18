@@ -12,15 +12,15 @@
 <body>
 	
 	<header class="page-header">
-		<div class="page-header__button">
+		
+		<div class="page-header__group-menu">
+			<div class="page-header__button">
 				<button class="hamburger hamburger--3dx-r" type="button">
 					  <span class="hamburger-box">
 					    <span class="hamburger-inner"></span>
 					  </span>
 				</button>
 			</div>
-		<div class="page-header__group-menu">
-			
 			<div class="page-header__second-menu">
 				<div class="page-header__wrapper">
 					<div class="page-header__links">
@@ -73,7 +73,7 @@
 								<li><a href="delivery.html">Доставка</a></li>
 							</ul>
 						</li>
-						<li class="menu-item"><a href="grow.html">Технологии<br class="line-break-tablet"> выращивания</a><!-- <span class="menu-span"></span> -->
+						<li class="menu-item"><a href="grow.html">Технологии<br> выращивания</a><!-- <span class="menu-span"></span> -->
 							<ul class="main-nav__submenu">
 								<li><a href="technology.html">Технологии</a></li>
 								<li><a href="excursions.html">Экскурсии</a></li>
@@ -81,7 +81,7 @@
 								<li><a href="video.html">Видео</a></li>
 							</ul>
 						</li>
-						<li class="menu-item"><a href="care.html">Уход <br class="line-break-tablet">и укладка</a><!-- <span class="menu-span"></span> -->
+						<li class="menu-item"><a href="care.html">Уход<br>и укладка</a><!-- <span class="menu-span"></span> -->
 							<ul class="main-nav__submenu">
 								<li><a href="stow.html">Укладка газона</a></li>
 								<li><a href="treat.html">Уход за газоном</a></li>
@@ -388,8 +388,8 @@
 							<input type="tel" id="phone_call" name="phone" placeholder="Ваш номер телефона:">
 						</div>
 						<div class="s-contacts__buttons">
-							<button class="btn btn--form-call" type="submit">Перезвонить мне</button>
-							<button class="btn btn--form-order" type="submit">Уточнить цену</button>
+							<button class="btn btn--form-call" id="popup-buy" type="submit">Перезвонить мне</button>
+							<button class="btn btn--form-order" id="popup-ask" type="submit">Уточнить цену</button>
 						</div>
 					</form>
 				</div>
@@ -405,7 +405,7 @@
 							<textarea id="mess" name="message" rows="10" placeholder="Ваше сообщение:"></textarea>
 						</div>
 						<div class="s-contacts__button">	
-							<button class="btn btn--form-mail" type="submit">Отправить</button>
+							<button class="btn btn--form-mail"  type="submit">Отправить</button>
 						</div>
 					</form>
 				</div>
@@ -461,125 +461,127 @@
 		</div>
 	</footer>
 	
-	<div class="modal-overlay"></div>
-	<!-- Modal form call -->
-	
-	<div class="modal-wrapper-call">
-		<div class="modal-call">
-			<button class="modal-call__close" type="button" title="Закрыть">Закрыть</button>
-			<h3 class="modal-call__title">Расчет рулонного газона STARK</h3>
-			<form class="form form--call" action="" method="post">
-				<div class="form__city">
-					<label for="city_call">ГОРОД:</label>
-					<input type="text" id="city_call" name="city">
-				</div>
-				<div class="form__region">
-					<label for="region_call">ОБЛАСТЬ:</label>
-					<input type="text" id="region_call" name="region">
-				</div>
-				<div class="form__delivery">
-					<p class="form__text">НЕОБХОДИМОСТЬ ДОСТАВКИ:</p>
-					<div class="form__radio-delivery">
-						<label for="yes-a"><input type="radio" name="delivery" value="yes" id="yes-a" checked><span class="wpcf7-list-item-label">ДА</span></label>
-						<label for="no-a"><input type="radio" name="delivery" value="no" id="no-a"><span class="wpcf7-list-item-label">НЕТ</span></label>
+	<div class="overlay" id="overlay">
+		<div class="overlay-background" id="overlay-background"></div>
+
+		<!-- Modal form call -->
+		
+		<div class="overlay-content1" id="overlay-content1">
+			<div class="modal-call">
+				<button class="modal-call__close" id="overlay-close-call" type="button" title="Закрыть">Закрыть</button>
+				<h3 class="modal-call__title">Расчет рулонного газона STARK</h3>
+				<form class="form form--call" action="" method="post">
+					<div class="form__city">
+						<label for="city_call">ГОРОД:</label>
+						<input type="text" id="city_call" name="city">
 					</div>
-				</div>
-				<div class="form__wishes">
-					<p class="form__text">ЖЕЛАЕМЫЙ ГАЗОН:</p>
-					<div class="form__radio-wishes">
-						<label for="prem-a"><input type="radio" name="wishes" value="prem" id="prem-a" checked><span class="wpcf7-list-item-label">УНИВЕРСАЛЬНЫЙ ПРЕМИУМ</span></label>
-						<br>
-						<label for="sport-a"><input type="radio" name="wishes" value="sport" id="sport-a"><span class="wpcf7-list-item-label">СПОРТИВНЫЙ ГАЗОН</span></label>
-						<br>
-						<label for="shadow-a"><input type="radio" name="wishes" value="shadow" id="shadow-a"><span class="wpcf7-list-item-label">ТЕНЕВОЙ ГАЗОН</span>
-						</label><br>
-						<label for="dry-a"><input type="radio" name="wishes" value="dry" id="dry-a"><span class="wpcf7-list-item-label">ДЛЯ ЗАСУШЛИВЫХ МЕСТ</span></label>
-						<br>
+					<div class="form__region">
+						<label for="region_call">ОБЛАСТЬ:</label>
+						<input type="text" id="region_call" name="region">
 					</div>
-				</div>
-				<div class="form__amount">
-					<label for="amount">НЕОБХОДИМОЕ КОЛ-ВО (м
-						<sup>2</sup>):</label>
-					<input type="text" id="amount_call" name="amount">
-				</div>
-				<div class="form__size">
-					<label for="size">РАЗМЕР УЧАСТКА (ширина/длина):</label>
-					<input type="text" id="size_call" name="size">
-				</div>
-				<div class="form__name form__name--modal">
-					<input type="text" id="name_form" name="name" placeholder="Ваше имя:">
-				</div>
-				<div class="form__phone form__phone--modal">
-					<input type="tel" id="phone_form" name="phone" placeholder="Ваш номер телефона:">
-				</div>
-				<div class="form__mail form__mail--modal">
-					<input type="email" id="mail_form" name="phone" placeholder="Ваш E-mail:">
-				</div>
-	
-				<button class="btn btn--form-calc" type="submit">Заказать расчет цены рулонного газона STARK</button>
-	
-			</form>
+					<div class="form__delivery">
+						<p class="form__text">НЕОБХОДИМОСТЬ ДОСТАВКИ:</p>
+						<div class="form__radio-delivery">
+							<label for="yes-a"><input type="radio" name="delivery" value="yes" id="yes-a" checked><span class="wpcf7-list-item-label">ДА</span></label>
+							<label for="no-a"><input type="radio" name="delivery" value="no" id="no-a"><span class="wpcf7-list-item-label">НЕТ</span></label>
+						</div>
+					</div>
+					<div class="form__wishes">
+						<p class="form__text">ЖЕЛАЕМЫЙ ГАЗОН:</p>
+						<div class="form__radio-wishes">
+							<label for="prem-a"><input type="radio" name="wishes" value="prem" id="prem-a" checked><span class="wpcf7-list-item-label">УНИВЕРСАЛЬНЫЙ ПРЕМИУМ</span></label>
+							<br>
+							<label for="sport-a"><input type="radio" name="wishes" value="sport" id="sport-a"><span class="wpcf7-list-item-label">СПОРТИВНЫЙ ГАЗОН</span></label>
+							<br>
+							<label for="shadow-a"><input type="radio" name="wishes" value="shadow" id="shadow-a"><span class="wpcf7-list-item-label">ТЕНЕВОЙ ГАЗОН</span>
+							</label><br>
+							<label for="dry-a"><input type="radio" name="wishes" value="dry" id="dry-a"><span class="wpcf7-list-item-label">ДЛЯ ЗАСУШЛИВЫХ МЕСТ</span></label>
+							<br>
+						</div>
+					</div>
+					<div class="form__amount">
+						<label for="amount">НЕОБХОДИМОЕ КОЛ-ВО (м
+							<sup>2</sup>):</label>
+						<input type="text" id="amount_call" name="amount">
+					</div>
+					<div class="form__size">
+						<label for="size">РАЗМЕР УЧАСТКА (ширина/длина):</label>
+						<input type="text" id="size_call" name="size">
+					</div>
+					<div class="form__name form__name--modal">
+						<input type="text" id="name_form" name="name" placeholder="Ваше имя:">
+					</div>
+					<div class="form__phone form__phone--modal">
+						<input type="tel" id="phone_form" name="phone" placeholder="Ваш номер телефона:">
+					</div>
+					<div class="form__mail form__mail--modal">
+						<input type="email" id="mail_form" name="phone" placeholder="Ваш E-mail:">
+					</div>
+		
+					<button class="btn btn--form-calc" type="submit">Заказать расчет цены рулонного газона STARK</button>
+		
+				</form>
+			</div>
+		</div>
+		
+		<!-- Modal form mail -->
+		<div class="overlay-content2" id="overlay-content2">
+			<div class="modal-mail">
+				<button class="modal-mail__close" id="overlay-close-mail" type="button" title="Закрыть">Закрыть</button>
+				<h3 class="modal-mail__title">Купить рулонный газон STARK</h3>
+				<form class="form form--mail" action="" method="post">
+					<div class="form__city">
+						<label for="city">ГОРОД:</label>
+						<input type="text" id="city" name="city">
+					</div>
+					<div class="form__region">
+						<label for="region">ОБЛАСТЬ:</label>
+						<input type="text" id="region" name="region">
+					</div>
+					<div class="form__delivery">
+						<p class="form__text">НЕОБХОДИМОСТЬ ДОСТАВКИ:</p>
+						<div class="form__radio-delivery">
+							<input type="radio" name="delivery" value="yes-b" id="yes-b" checked><label for="yes-b">ДА</label>
+							<input type="radio" name="delivery" value="no-b" id="no-b"><label for="no-b">НЕТ</label>
+						</div>
+					</div>
+					<div class="form__wishes">
+						<p class="form__text">ЖЕЛАЕМЫЙ ГАЗОН:</p>
+						<div class="form__radio-wishes">
+							<input type="radio" name="wishes" value="prem-b" id="prem-b" checked><label for="prem-b">УНИВЕРСАЛЬНЫЙ ПРЕМИУМ</label>
+							<br>
+							<input type="radio" name="wishes" value="sport-b" id="sport-b"><label for="sport-b">СПОРТИВНЫЙ ГАЗОН</label>
+							<br>
+							<input type="radio" name="wishes" value="shadow-b" id="shadow-b"><label for="shadow-b">ТЕНЕВОЙ ГАЗОН
+							<br></label>
+							<input type="radio" name="wishes" value="dry-b" id="dry-b"><label for="dry-b">ДЛЯ ЗАСУШЛИВЫХ МЕСТ</label>
+							<br>
+						</div>
+					</div>
+					<div class="form__amount">
+						<label for="amount">НЕОБХОДИМОЕ КОЛ-ВО (м
+							<sup>2</sup>):</label>
+						<input type="text" id="amount" name="amount">
+					</div>
+					<div class="form__size">
+						<label for="size">РАЗМЕР УЧАСТКА (ширина/длина):</label>
+						<input type="text" id="size" name="size">
+					</div>
+					<div class="form__name form__name--modal">
+						<input type="text" id="name" name="name" placeholder="Ваше имя:">
+					</div>
+					<div class="form__phone form__phone--modal">
+						<input type="tel" id="phone" name="phone" placeholder="Ваш номер телефона:">
+					</div>
+					<div class="form__mail form__mail--modal">
+						<input type="email" id="mail" name="phone" placeholder="Ваш E-mail:">
+					</div>
+		
+					<button class="btn btn--form-buy" type="submit">Купить</button>
+				</form>
+			</div>
 		</div>
 	</div>
-	
-	<!-- Modal form mail -->
-	<div class="modal-wrapper-mail">
-		<div class="modal-mail">
-			<button class="modal-mail__close" type="button" title="Закрыть">Закрыть</button>
-			<h3 class="modal-mail__title">Купить рулонный газон STARK</h3>
-			<form class="form form--mail" action="" method="post">
-				<div class="form__city">
-					<label for="city">ГОРОД:</label>
-					<input type="text" id="city" name="city">
-				</div>
-				<div class="form__region">
-					<label for="region">ОБЛАСТЬ:</label>
-					<input type="text" id="region" name="region">
-				</div>
-				<div class="form__delivery">
-					<p class="form__text">НЕОБХОДИМОСТЬ ДОСТАВКИ:</p>
-					<div class="form__radio-delivery">
-						<input type="radio" name="delivery" value="yes-b" id="yes-b" checked><label for="yes-b">ДА</label>
-						<input type="radio" name="delivery" value="no-b" id="no-b"><label for="no-b">НЕТ</label>
-					</div>
-				</div>
-				<div class="form__wishes">
-					<p class="form__text">ЖЕЛАЕМЫЙ ГАЗОН:</p>
-					<div class="form__radio-wishes">
-						<input type="radio" name="wishes" value="prem-b" id="prem-b" checked><label for="prem-b">УНИВЕРСАЛЬНЫЙ ПРЕМИУМ</label>
-						<br>
-						<input type="radio" name="wishes" value="sport-b" id="sport-b"><label for="sport-b">СПОРТИВНЫЙ ГАЗОН</label>
-						<br>
-						<input type="radio" name="wishes" value="shadow-b" id="shadow-b"><label for="shadow-b">ТЕНЕВОЙ ГАЗОН
-						<br></label>
-						<input type="radio" name="wishes" value="dry-b" id="dry-b"><label for="dry-b">ДЛЯ ЗАСУШЛИВЫХ МЕСТ</label>
-						<br>
-					</div>
-				</div>
-				<div class="form__amount">
-					<label for="amount">НЕОБХОДИМОЕ КОЛ-ВО (м
-						<sup>2</sup>):</label>
-					<input type="text" id="amount" name="amount">
-				</div>
-				<div class="form__size">
-					<label for="size">РАЗМЕР УЧАСТКА (ширина/длина):</label>
-					<input type="text" id="size" name="size">
-				</div>
-				<div class="form__name form__name--modal">
-					<input type="text" id="name" name="name" placeholder="Ваше имя:">
-				</div>
-				<div class="form__phone form__phone--modal">
-					<input type="tel" id="phone" name="phone" placeholder="Ваш номер телефона:">
-				</div>
-				<div class="form__mail form__mail--modal">
-					<input type="email" id="mail" name="phone" placeholder="Ваш E-mail:">
-				</div>
-	
-				<button class="btn btn--form-buy" type="submit">Купить</button>
-			</form>
-		</div>
-	</div>
-	
 	
 	
 	<!--[if lt IE 9]>

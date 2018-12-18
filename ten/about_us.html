@@ -10,7 +10,7 @@
 </head>
 <body>
 	
-	<header class="page-header page-header--about-us">
+	<header class="page-header page-header--about_us">
 		<div class="page-header__second-menu">
 			<div class="page-header__wrapper">
 				<div class="page-header__links">
@@ -102,10 +102,10 @@
 				</ul>
 			</div>
 		</nav>
-		<div class="page-header__about page-header__about--right">
-			<h1 class="page-header__title page-header__title--right">Рулонные<br> газоны<br> Stark</h1>
-			<p class="page-header__text page-header__text--right">Жизнь<br> в зелёных<br> тонах</p>
-			<a href="catalog.html#catalog" class="btn btn--order btn--right">Заказать онлайн</a>
+		<div class="page-header__about page-header__about--about_us">
+			<h1 class="page-header__title page-header__title--about_us">Рулонные<br> газоны<br> Stark</h1>
+			<p class="page-header__text page-header__text--about_us">Жизнь<br> в зелёных<br> тонах</p>
+			<a href="catalog.html#catalog" class="btn btn--order btn--about_us">Заказать онлайн</a>
 		</div>
 		<div class="arrow"></div>
 	</header>
@@ -213,7 +213,7 @@
 							<input type="tel" id="phone_call" name="phone" placeholder="Ваш номер телефона:">
 						</div>
 						<div class="s-contacts__buttons">	
-							<button class="btn btn--form-call" type="submit">Перезвонить мне</button><button class="btn btn--form-order" type="submit">Уточнить цену</button>
+							<input class="btn btn--form-call" type="submit" value="Перезвонить мне"></input><button class="btn btn--form-order" type="submit">Уточнить цену</button>
 						</div>
 					</form>
 				</div>
@@ -229,7 +229,9 @@
 							<textarea id="mess" name="message" rows="10" placeholder="Ваше сообщение:"></textarea>
 						</div>
 						<!-- <p class="form__required">- поля, обязательные для заполнения</p> -->
-						<button class="btn btn--form-mail" type="submit">Отправить</button>
+						<div class="s-contacts__button">	
+							<button class="btn btn--form-mail" type="submit">Отправить</button>
+						</div>
 					</form>
 				</div>
 				<div class="s-contacts__up">
