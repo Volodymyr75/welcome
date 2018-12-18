@@ -4761,10 +4761,7 @@ span.wpcf7-not-valid-tip {
     .page-header__group-menu.active {
       right: 0;
       width: 55%;
-      overflow-y: auto;
-      box-shadow: 0 200px 500px #000; }
-      .page-header__group-menu.active .hamburger {
-        right: 52%; }
+      box-shadow: -30rem 0 70rem #000; }
   .page-header__second-menu {
     padding-top: 2.5rem;
     border-bottom: 0.1rem solid #448600; }
@@ -6047,7 +6044,7 @@ span.wpcf7-not-valid-tip {
     .page-header {
       background-position: 70% center; }
       .page-header.active .hamburger {
-        right: 55%; }
+        right: 58%; }
       .page-header--photo {
         background-position: 70% center; }
       .page-header--about {
@@ -6066,9 +6063,7 @@ span.wpcf7-not-valid-tip {
       right: 0;
       width: 65%;
       overflow-y: auto;
-      box-shadow: 0 200px 500px #000; }
-      .page-header__group-menu.active .hamburger {
-        right: 55%; }
+      box-shadow: -15rem 0 40rem #000; }
   .page-header__second-menu {
     padding-top: 1.5rem;
     border-bottom: 0.1rem solid #448600; }
