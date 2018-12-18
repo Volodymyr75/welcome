@@ -1,10 +1,14 @@
 $(document).ready(function() {
 
+	$(".main-nav__submenu").before("<span class='menu-span'></span>");
 
 	var $hamburger = $(".hamburger");
 			  $hamburger.on("click", function(e) {
 			  $(this).toggleClass("is-active");
 			  $(".page-header").toggleClass("active");
+			  $(".page-header__group-menu").toggleClass("active");
+			  // $(".page-header__second-menu").toggleClass("active");
+			  // $(".main-nav").toggleClass("active");
 	    // Do something else, like open/close menu
 	  });
 	// $(".main-nav__toggle").click(function() {
@@ -110,6 +114,73 @@ $(document).ready(function() {
         e.preventDefault();
         $('body,html').animate({scrollTop: 0}, 800);    
     });
+
+
+
+
+
+
+$("#popup-call, #popup-call-up, #popup-call-down").on("click", function(event) {
+		  event.preventDefault();
+		  $('#overlay').addClass('open');
+		  $('#overlay-content1').addClass('open');
+	});
+
+$("#popup-send, #popup-send-up, #popup-send-down").on("click", function(event) {
+		  event.preventDefault();
+		  $('#overlay').addClass('open');
+		  $('#overlay-content2').addClass('open');
+	});
+
+
+
+$("#popup-ex").on("click", function(event) {
+		  event.preventDefault();
+		  $('#overlay').addClass('open');
+		  $('#overlay-content3').addClass('open');
+	});
+$("#popup-cl").on("click", function(event) {
+		  event.preventDefault();
+		  $('#overlay').addClass('open');
+		  $('#overlay-content4').addClass('open');
+	});
+$("#popup-buy").on("click", function(event) {
+		  event.preventDefault();
+		  $('#overlay').addClass('open');
+		  $('#overlay-content5').addClass('open');
+	});
+
+$('#overlay-background,#overlay-close-call, #overlay-close-mail, #overlay-close-ex, #overlay-close-cl, #overlay-close-buy').click(function() {
+      $('#overlay').removeClass('open');
+      $('#overlay-content1').removeClass('open');
+      $('#overlay-content2').removeClass('open');
+      $('#overlay-content3').removeClass('open');
+      $('#overlay-content4').removeClass('open');
+      $('#overlay-content5').removeClass('open');
+    });
+
+
+	var $calculateHeight;
+
+  $calculateHeight = function() {
+    var $content, contentHeight, finalHeight, windowHeight;
+    $content = $('#overlay-content1');
+    contentHeight = parseInt($content.height());
+    windowHeight = $(window).height();
+    finalHeight = windowHeight > contentHeight ? windowHeight : contentHeight;
+    return finalHeight;
+  };
+
+
+
+function heightDetect() {
+		$("#overlay-background").height($calculateHeight);
+	};
+	heightDetect();
+	$(window).resize(function() {
+		heightDetect();
+	});
+
 
 });
 

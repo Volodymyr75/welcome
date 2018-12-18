@@ -130,9 +130,18 @@
 		</nav>	
 	</header>
 	<div class="main">
+		<section class="s-slider s-slider--golden">
+			<div class="s-slider__wrapper">
+				<header class="s-slider__header">
+						<h1 class="s-slider__title"><span>Riola</span> - фруктовый<br> вкус жизни!</h1>
+				</header>
+				<a href="catalog.html" class="btn btn--order">Заказать онлайн</a>
+			</div>
+			<!-- <div class="s-catalog__wrapper s-catalog__wrapper--cookies">
+				<p class="s-catalog__cookies">RIOLA/ЯБЛОКИ</p>
+			</div> -->
+		</section>
 		<section class="s-features">
-			<div class="s-features__slider s-features__slider--golden"></div>
-			<p class="s-features__cookies">RIOLA/ЯБЛОКИ/GOLDEN DELICIOUS</p>
 			<header class="s-features__header">
 				<h2 class="s-features__title">Яблоки Golden Delicious</h2>
 			</header>
@@ -338,6 +347,10 @@
 		</div>
 	</div>
 
+
+
+
+
 	<!-- -Modal form clarify- -->
 
 	<div class="modal-wrapper-clarify">
@@ -358,27 +371,27 @@
 						<div class="form__profile">
 							<p class="form__text">ПРОФИЛЬ КОМПАНИИ:</p>
 							<div class="form__radio-profile">
-								<input type="radio" name="profile" value="gold" checked>РИТЕЙЛ<br>
-								<input type="radio" name="profile" value="fuji">ОПТОВИК<br>
-								<input type="radio" name="profile" value="granny">ДРУГОЕ<br>
+								<input type="radio" name="profile" value="retail" id="retail" checked><label for="retail">РИТЕЙЛ</label><br>
+								<input type="radio" name="profile" value="opt" id="opt"><label for="opt">ОПТОВИК</label><br>
+								<input type="radio" name="profile" value="other" id="other"><label for="other">ДРУГОЕ</label>
 							</div>
 						</div>
 						<div class="form__type">
 							<p class="form__text">НАИМЕНОВАНИЕ:</p>
 							<div class="form__radio-type">
-								<input type="radio" name="type" value="gold" checked>GOLDEN DELICIOUS<br>
-								<input type="radio" name="type" value="fuji">FUJI<br>
-								<input type="radio" name="type" value="granny">GRANNY SMITH<br>
-								<input type="radio" name="type" value="gala">GALA<br>
+								<input type="radio" name="type" value="gold" id="gold" checked><label for="gold">GOLDEN DELICIOUS</label><br>
+								<input type="radio" name="type" value="fuji" id="fuji"><label for="fuji">FUJI</label><br>
+								<input type="radio" name="type" value="granny" id="granny"><label for="granny">GRANNY SMITH</label><br>
+								<input type="radio" name="type" value="gala" id="gala"><label for="gala">GALA</label><br>
 							</div>
 						</div>
 						<div class="form__sort">
 							<p class="form__text">СОРТ ЯБЛОК:</p>
 							<div class="form__radio-sort">
-								<input type="radio" name="sort" value="gold" checked>ПРЕМИУМ<br>
-								<input type="radio" name="sort" value="fuji">ВЫСШИЙ<br>
-								<input type="radio" name="sort" value="granny">1 СОРТ<br>
-								<input type="radio" name="sort" value="gala">2 СОРТ
+								<input type="radio" name="sort" value="prem" id="prem" checked><label for="prem">ПРЕМИУМ</label><br>
+								<input type="radio" name="sort" value="supr" id="supr"><label for="supr">ВЫСШИЙ</label><br>
+								<input type="radio" name="sort" value="first" id="first"><label for="first">1 СОРТ</label><br>
+								<input type="radio" name="sort" value="second" id="second"><label for="second">2 СОРТ</label>
 							</div>
 						</div>
 						<div class="form__volume">
@@ -388,8 +401,8 @@
 						<div class="form__need">
 							<p class="form__text">НЕОБХОДИМОСТЬ ДОСТАВКИ:</p>
 							<div class="form__radio-need">
-								<input type="radio" name="need" value="yes" checked>ДА
-								<input type="radio" name="need" value="no">НЕТ	
+								<input type="radio" name="need" value="yes" id="yes" checked><label for="yes">ДА</label>
+								<input type="radio" name="need" value="no" id="no"><label for="no">НЕТ</label>
 							</div>
 						</div>
 					</div>
@@ -397,21 +410,21 @@
 						<div class="form__frequent">
 							<p class="form__text">ПРЕДПОЛАГАЕМАЯ<br> ЧАСТОТА ДОСТАВКИ:</p>
 							<div class="form__radio-frequent">
-								<input type="radio" name="frequent" value="once" checked>ЕДИНОРАЗОВО<br>
-								<input type="radio" name="frequent" value="three">3 РАЗА В НЕДЕЛЮ<br>
-								<input type="radio" name="frequent" value="two">2 РАЗА В НЕДЕЛЮ<br>
-								<input type="radio" name="frequent" value="one">1 РАЗ В НЕДЕЛЮ<br>
-								<input type="radio" name="frequent" value="half">2 РАЗА В МЕСЯЦ
+								<input type="radio" name="frequent" value="once" id="once" checked><label for="once">ЕДИНОРАЗОВО</label><br>
+								<input type="radio" name="frequent" value="three" id="three"><label for="three">3 РАЗА В НЕДЕЛЮ</label><br>
+								<input type="radio" name="frequent" value="two" id="two"><label for="two">2 РАЗА В НЕДЕЛЮ</label><br>
+								<input type="radio" name="frequent" value="one" id="one"><label for="one">1 РАЗ В НЕДЕЛЮ</label><br>
+								<input type="radio" name="frequent" value="half" id="half"><label for="half">2 РАЗА В МЕСЯЦ</label>
 							</div>
 						</div>
 						<div class="form__pack">
 							<p class="form__text">ЖЕЛАЕМАЯ УПАКОВКА:</p>
 							<div class="form__radio-pack">
-								<input type="radio" name="pack" value="one" checked>ОДНОРЯДНЫЙ ГОФРО С ПЕЧАТЬЮ<br>
-								<input type="radio" name="pack" value="two_with">ДВУХРЯДНЫЙ ГОФРО С ПЕЧАТЬЮ<br>
-								<input type="radio" name="pack" value="two">ДВУХРЯДНЫЙ ГОФРО<br>
-								<input type="radio" name="pack" value="pull">ПУЛЛИНГОВАЯ ТАРА<br>
-								<input type="radio" name="pack" value="own">СВОЯ ТАРА
+								<input type="radio" name="pack" value="one-g" id="one-g" checked><label for="one-g">ОДНОРЯДНЫЙ ГОФРО С ПЕЧАТЬЮ</label><br>
+								<input type="radio" name="pack" value="two-with" id="two-with"><label for="two-with">ДВУХРЯДНЫЙ ГОФРО С ПЕЧАТЬЮ</label><br>
+								<input type="radio" name="pack" value="two-g" id="two-g"><label for="two-g">ДВУХРЯДНЫЙ ГОФРО</label><br>
+								<input type="radio" name="pack" value="pull" id="pull"><label for="pull">ПУЛЛИНГОВАЯ ТАРА</label><br>
+								<input type="radio" name="pack" value="own" id="own"><label for="own">СВОЯ ТАРА</label>
 							</div>
 						</div>
 						<div class="form__person">
@@ -462,27 +475,27 @@
 						<div class="form__profile">
 							<p class="form__text">ПРОФИЛЬ КОМПАНИИ:</p>
 							<div class="form__radio-profile">
-								<input type="radio" name="profile" value="gold" checked>РИТЕЙЛ<br>
-								<input type="radio" name="profile" value="fuji">ОПТОВИК<br>
-								<input type="radio" name="profile" value="granny">ДРУГОЕ<br>
+								<input type="radio" name="profile" value="retail-b" id="retail-b" checked><label for="retail-b">РИТЕЙЛ</label><br>
+								<input type="radio" name="profile" value="opt-b" id="opt-b"><label for="opt-b">ОПТОВИК</label><br>
+								<input type="radio" name="profile" value="other-b" id="other-b"><label for="other-b">ДРУГОЕ</label>
 							</div>
 						</div>
 						<div class="form__type">
 							<p class="form__text">НАИМЕНОВАНИЕ:</p>
 							<div class="form__radio-type">
-								<input type="radio" name="type" value="gold" checked>GOLDEN DELICIOUS<br>
-								<input type="radio" name="type" value="fuji">FUJI<br>
-								<input type="radio" name="type" value="granny">GRANNY SMITH<br>
-								<input type="radio" name="type" value="gala">GALA<br>
+								<input type="radio" name="type" value="gold-b" id="gold-b" checked><label for="gold-b">GOLDEN DELICIOUS</label><br>
+								<input type="radio" name="type" value="fuji-b" id="fuji-b"><label for="fuji-b">FUJI</label><br>
+								<input type="radio" name="type" value="granny-b" id="granny-b"><label for="granny-b">GRANNY SMITH</label><br>
+								<input type="radio" name="type" value="gala-b" id="gala-b"><label for="gala-b">GALA</label><br>
 							</div>
 						</div>
 						<div class="form__sort">
 							<p class="form__text">СОРТ ЯБЛОК:</p>
 							<div class="form__radio-sort">
-								<input type="radio" name="sort" value="gold" checked>ПРЕМИУМ<br>
-								<input type="radio" name="sort" value="fuji">ВЫСШИЙ<br>
-								<input type="radio" name="sort" value="granny">1 СОРТ<br>
-								<input type="radio" name="sort" value="gala">2 СОРТ
+								<input type="radio" name="sort" value="prem-b" id="prem-b" checked><label for="prem-b">ПРЕМИУМ</label><br>
+								<input type="radio" name="sort" value="supr-b" id="supr-b"><label for="supr-b">ВЫСШИЙ</label><br>
+								<input type="radio" name="sort" value="first-b" id="first-b"><label for="first-b">1 СОРТ</label><br>
+								<input type="radio" name="sort" value="second-b" id="second-b"><label for="second-b">2 СОРТ</label>
 							</div>
 						</div>
 						<div class="form__volume">
@@ -492,8 +505,8 @@
 						<div class="form__need">
 							<p class="form__text">НЕОБХОДИМОСТЬ ДОСТАВКИ:</p>
 							<div class="form__radio-need">
-								<input type="radio" name="need" value="yes" checked>ДА
-								<input type="radio" name="need" value="no">НЕТ	
+								<input type="radio" name="need" value="yes-b" id="yes-b" checked><label for="yes-b">ДА</label>
+								<input type="radio" name="need" value="no-b" id="no-b"><label for="no-b">НЕТ</label>
 							</div>
 						</div>
 					</div>
@@ -501,21 +514,21 @@
 						<div class="form__frequent">
 							<p class="form__text">ПРЕДПОЛАГАЕМАЯ<br> ЧАСТОТА ДОСТАВКИ:</p>
 							<div class="form__radio-frequent">
-								<input type="radio" name="frequent" value="once" checked>ЕДИНОРАЗОВО<br>
-								<input type="radio" name="frequent" value="three">3 РАЗА В НЕДЕЛЮ<br>
-								<input type="radio" name="frequent" value="two">2 РАЗА В НЕДЕЛЮ<br>
-								<input type="radio" name="frequent" value="one">1 РАЗ В НЕДЕЛЮ<br>
-								<input type="radio" name="frequent" value="half">2 РАЗА В МЕСЯЦ
+								<input type="radio" name="frequent" value="once-b" id="once-b" checked><label for="once-b">ЕДИНОРАЗОВО</label><br>
+								<input type="radio" name="frequent" value="three-b" id="three-b"><label for="three-b">3 РАЗА В НЕДЕЛЮ</label><br>
+								<input type="radio" name="frequent" value="two-b" id="two-b"><label for="two-b">2 РАЗА В НЕДЕЛЮ</label><br>
+								<input type="radio" name="frequent" value="one-b" id="one-b"><label for="one-b">1 РАЗ В НЕДЕЛЮ</label><br>
+								<input type="radio" name="frequent" value="half-b" id="half-b"><label for="half-b">2 РАЗА В МЕСЯЦ</label>
 							</div>
 						</div>
 						<div class="form__pack">
 							<p class="form__text">ЖЕЛАЕМАЯ УПАКОВКА:</p>
 							<div class="form__radio-pack">
-								<input type="radio" name="pack" value="one" checked>ОДНОРЯДНЫЙ ГОФРО С ПЕЧАТЬЮ<br>
-								<input type="radio" name="pack" value="two_with">ДВУХРЯДНЫЙ ГОФРО С ПЕЧАТЬЮ<br>
-								<input type="radio" name="pack" value="two">ДВУХРЯДНЫЙ ГОФРО<br>
-								<input type="radio" name="pack" value="pull">ПУЛЛИНГОВАЯ ТАРА<br>
-								<input type="radio" name="pack" value="own">СВОЯ ТАРА
+								<input type="radio" name="pack" value="one-g-b" id="one-g-b" checked><label for="one-g-b">ОДНОРЯДНЫЙ ГОФРО С ПЕЧАТЬЮ</label><br>
+								<input type="radio" name="pack" value="two-with-b" id="two-with-b"><label for="two-with-b">ДВУХРЯДНЫЙ ГОФРО С ПЕЧАТЬЮ</label><br>
+								<input type="radio" name="pack" value="two-g-b" id="two-g-b"><label for="two-g-b">ДВУХРЯДНЫЙ ГОФРО</label><br>
+								<input type="radio" name="pack" value="pull-b" id="pull-b"><label for="pull-b">ПУЛЛИНГОВАЯ ТАРА</label><br>
+								<input type="radio" name="pack" value="own-b" id="own-b"><label for="own-b">СВОЯ ТАРА</label>
 							</div>
 						</div>
 						<div class="form__person">
